@@ -1,6 +1,6 @@
 # Status — 2026-10-27
 
-The private repository is https://github.com/hax2/wcsmatrix.
+The public repository is https://github.com/hax2/wcsmatrix.
 
 ## Collected
 

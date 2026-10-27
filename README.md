@@ -38,7 +38,7 @@ bash scripts/run_server.sh configs/smoke.yaml
 bash scripts/run_server.sh configs/reproduction.yaml
 ```
 
-The GitHub repository is private; authenticate Git on the server. Accept model terms and set `HF_TOKEN` if your account is asked for access. No OpenRouter key is needed on the server when the collected answers are present. `uv.lock` pins resolved dependencies; `uv sync` selects the extras for that machine. Keep the lockfile unchanged for comparisons. CUDA drivers must support the installed PyTorch wheel.
+The GitHub repository is public and can be cloned without authentication. Accept model terms and set `HF_TOKEN` if your account is asked for access. No OpenRouter key is needed on the server when the collected answers are present. `uv.lock` pins resolved dependencies; `uv sync` selects the extras for that machine. Keep the lockfile unchanged for comparisons. CUDA drivers must support the installed PyTorch wheel.
 
 Models load sequentially with bf16 weights, except Qwen3.5-27B in bitsandbytes int8. The default process budget is **38 GiB**, with 4 GiB reserved beyond estimated weight placement. The loader checks free VRAM, sets a PyTorch allocator limit, and rejects CPU/disk weight placement. Other processes and allocations outside PyTorch can affect usable memory. Adjust `hardware.vram_limit_gib` to your actual allocation before running. Avoid parallel GPU jobs within this repo.
 
