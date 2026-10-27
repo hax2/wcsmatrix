@@ -1,0 +1,5 @@
+source,kind,answers,complete_answers,expected_answers,mean_words,min_words,max_words,outside_150_400,reported_cost_usd
+claude-opus-5.5,frontier,50,50,50,364.96,296,404,1,0.776524
+gemini-4-argon,frontier,50,50,50,352.38,306,391,0,0.23577800000000002
+gpt-6-astra,frontier,50,50,50,262.54,191,314,0,0.91822
+human,human,50,50,50,234.56,151,397,0,0

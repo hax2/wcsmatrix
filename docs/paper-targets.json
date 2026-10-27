@@ -1,0 +1,4 @@
+{
+  "realistic": {"qwen-2b": 0.68, "qwen-4b": 0.74, "qwen-9b": 0.78, "qwen-27b-int8": 0.77, "gemma-e2b": 0.35, "gemma-e4b": 0.53, "gemma-12b": 0.67},
+  "strict": {"qwen-2b": 0.70, "qwen-4b": 0.79, "qwen-9b": 0.80, "qwen-27b-int8": 0.82, "gemma-e2b": 0.35, "gemma-e4b": 0.54, "gemma-12b": 0.72}
+}

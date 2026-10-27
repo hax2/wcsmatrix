@@ -1,0 +1,55 @@
+name: smoke
+prompts: data/prompts/smoke.jsonl
+human_texts: data/texts/smoke-human.jsonl
+local_texts: data/texts/smoke-local.jsonl
+frontier_texts: data/texts/smoke-frontier.jsonl
+dataset:
+  n: 2
+  seed: 42
+  min_words: 150
+  max_words: 400
+  revision: 4d0ff18143b5a7e1b1e79beb540c04549d1e59d3
+prompt_template: 'Answer the following question in English, using 150–400 words. Give
+  only your answer.
+
+
+  {question}'
+models:
+- name: qwen-2b
+  family: qwen
+  id: Qwen/Qwen3.5-2B
+  revision: 15852e8c16360a2fea060d615a32b45270f8a8fc
+  precision: bf16
+  estimated_parameters_b: 2
+  stage: instruct
+  version: '3.5'
+  loader: multimodal
+  chat_kwargs:
+    enable_thinking: false
+frontier_models: []
+frontier_max_tokens: 4096
+generation:
+  max_new_tokens: 1024
+  do_sample: false
+scoring:
+  top_k: 100
+  top_p:
+  - 0.9
+  - 0.95
+  - 0.99
+  modes:
+  - realistic
+  - strict
+  - strict_full
+  word_policy: whitespace
+  context_mode: chat
+  chunk_size: 128
+  max_sequence_tokens: 8192
+  temperature: 1.0
+hardware:
+  vram_limit_gib: 38
+  reserve_gib: 4
+  cpu_memory_gib: 64
+analysis:
+  seed: 42
+  bootstrap_replicates: 10000

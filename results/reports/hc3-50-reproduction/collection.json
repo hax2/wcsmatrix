@@ -1,0 +1,54 @@
+[
+  {
+    "source": "claude-opus-5.5",
+    "kind": "frontier",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 364.96,
+    "min_words": 296,
+    "max_words": 404,
+    "outside_150_400": 1,
+    "reported_cost_usd": 0.776524,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "gemini-4-argon",
+    "kind": "frontier",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 352.38,
+    "min_words": 306,
+    "max_words": 391,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0.23577800000000002,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "gpt-6-astra",
+    "kind": "frontier",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 262.54,
+    "min_words": 191,
+    "max_words": 314,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0.91822,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "human",
+    "kind": "human",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 234.56,
+    "min_words": 151,
+    "max_words": 397,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  }
+]
