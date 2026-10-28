@@ -71,4 +71,4 @@ uv run wcsmatrix analyze --allow-partial
 
 Analysis defaults to requiring all configured scorer/source cells on every prompt. It produces human-minus-each-source contrasts, same-family-minus-cross-family contrasts excluding self cells, and paired directional asymmetry. Pointwise 95% percentile bootstrap intervals resample prompts (10,000 replicates, seed 42); they are not multiplicity-corrected. Each text's WCS is averaged equally over prompts, rather than pooling all words.
 
-See [experiment extensions](docs/experiments.md), [data provenance](data/README.md), and [reproduction notes](docs/methodology.md). Code is MIT licensed; the supplied paper and upstream datasets retain their own rights.
+See [frontier sampling audit](docs/frontier-sampling-audit.md), [experiment extensions](docs/experiments.md), [data provenance](data/README.md), and [reproduction notes](docs/methodology.md). Code is MIT licensed; the supplied paper and upstream datasets retain their own rights.
