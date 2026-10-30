@@ -8,8 +8,23 @@ import numpy as np
 def word_groups(text, offsets, policy="whitespace"):
     pattern = r"\S+" if policy == "whitespace" else r"\b\w+(?:['’-]\w+)*\b"
     groups = []
+    valid = [(i, int(a), int(b)) for i, (a, b) in enumerate(offsets) if b > a]
+    ptr = 0
+    n_valid = len(valid)
+    is_sorted = all(valid[i][1] <= valid[i + 1][1] and valid[i][2] <= valid[i + 1][2] for i in range(n_valid - 1))
     for match in re.finditer(pattern, text, flags=re.UNICODE):
-        positions = [i for i, (a, b) in enumerate(offsets) if b > a and a < match.end() and b > match.start()]
+        m_start, m_end = match.start(), match.end()
+        if is_sorted:
+            while ptr < n_valid and valid[ptr][2] <= m_start:
+                ptr += 1
+            k = ptr
+            positions = []
+            while k < n_valid and valid[k][1] < m_end:
+                if valid[k][2] > m_start:
+                    positions.append(valid[k][0])
+                k += 1
+        else:
+            positions = [i for i, a, b in valid if a < m_end and b > m_start]
         if not positions:
             raise ValueError(f"Word has no token offsets: {match.group()!r}")
         groups.append(positions)

@@ -1,0 +1,5 @@
+scorer,source,mode,p,wcs,n,relation,paper_rounded_wcs,difference_from_paper
+gemma-12b,human,realistic,0.99,0.8636687077179271,50,human,0.67,0.1936687077179271
+gemma-12b,human,strict,0.99,0.8694453847861675,50,human,0.72,0.14944538478616753
+qwen-9b,human,realistic,0.99,0.9643976600761565,50,human,0.78,0.18439766007615643
+qwen-9b,human,strict,0.99,0.9699507495352833,50,human,0.8,0.16995074953528322

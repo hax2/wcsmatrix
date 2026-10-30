@@ -1,0 +1,384 @@
+{
+  "expected_prompts": 50,
+  "incomplete_cells": [
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-12b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "gemma-e4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-2b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-4b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "realistic",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict",
+      "p": 0.99,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.9,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.95,
+      "n": 49
+    },
+    {
+      "scorer": "qwen-9b",
+      "source": "mimo-v2.6-pro",
+      "mode": "strict_full",
+      "p": 0.99,
+      "n": 49
+    }
+  ],
+  "evaluation_exclusions": {}
+}

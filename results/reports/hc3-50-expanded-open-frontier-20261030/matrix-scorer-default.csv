@@ -1,0 +1,559 @@
+variant,scorer,source,temperature,top_k,top_p,provenance,n,wcs,sd
+shipped,qwen-2b,human,0.6,20,0.95,generation_config.json (thinking default),50,0.6508000647173824,0.05820143471536835
+shipped,qwen-2b,qwen-2b,0.6,20,0.95,generation_config.json (thinking default),48,0.9999253285543608,0.0005173389508867664
+shipped,qwen-2b,qwen-4b,0.6,20,0.95,generation_config.json (thinking default),50,0.8960961954478782,0.014632312983538936
+shipped,qwen-2b,qwen-9b,0.6,20,0.95,generation_config.json (thinking default),50,0.8725874398712987,0.020682712045268156
+shipped,qwen-2b,gemma-e2b,0.6,20,0.95,generation_config.json (thinking default),50,0.8418818921884679,0.029581443974371506
+shipped,qwen-2b,gemma-e4b,0.6,20,0.95,generation_config.json (thinking default),50,0.8164687125061851,0.0342950276118287
+shipped,qwen-2b,gemma-12b,0.6,20,0.95,generation_config.json (thinking default),50,0.8227348446805637,0.030759581437834842
+shipped,qwen-2b,llama-3.2-1b,0.6,20,0.95,generation_config.json (thinking default),50,0.8588141324480288,0.06281163549431833
+shipped,qwen-2b,llama-3.1-8b,0.6,20,0.95,generation_config.json (thinking default),50,0.8706288337890393,0.022525023574698082
+shipped,qwen-2b,mistral-7b,0.6,20,0.95,generation_config.json (thinking default),50,0.8389623271973471,0.028202811684347615
+shipped,qwen-2b,gpt-6-astra,0.6,20,0.95,generation_config.json (thinking default),50,0.6251476671271782,0.04784233972610355
+shipped,qwen-2b,claude-opus-5.5,0.6,20,0.95,generation_config.json (thinking default),50,0.6856971023023953,0.04071227587752601
+shipped,qwen-2b,gemini-4-argon,0.6,20,0.95,generation_config.json (thinking default),50,0.7178782818129155,0.02886001636500216
+shipped,qwen-2b,qwen3.8-2.4t-a95b,0.6,20,0.95,generation_config.json (thinking default),50,0.7493525535901672,0.03485518219918915
+shipped,qwen-2b,deepseek-v4-pro-0813,0.6,20,0.95,generation_config.json (thinking default),50,0.7345164252510559,0.04608963447463413
+shipped,qwen-2b,deepseek-v4.1-flash-1017,0.6,20,0.95,generation_config.json (thinking default),50,0.6746989862117379,0.05474990687874512
+shipped,qwen-2b,glm-5.3,0.6,20,0.95,generation_config.json (thinking default),50,0.6812277784391192,0.04424405048516012
+shipped,qwen-2b,kimi-k3,0.6,20,0.95,generation_config.json (thinking default),50,0.6925196419028906,0.04116444333379858
+shipped,qwen-2b,minimax-m3,0.6,20,0.95,generation_config.json (thinking default),50,0.7073211009043852,0.05016976718853183
+shipped,qwen-2b,mimo-v2.6-pro,0.6,20,0.95,generation_config.json (thinking default),49,0.7259628209121256,0.04120960230731345
+shipped,qwen-4b,human,0.6,20,0.95,generation_config.json (thinking default),50,0.6901443473765663,0.052623624136175814
+shipped,qwen-4b,qwen-2b,0.6,20,0.95,generation_config.json (thinking default),48,0.8866138727576555,0.025076529420551226
+shipped,qwen-4b,qwen-4b,0.6,20,0.95,generation_config.json (thinking default),50,1.0,0.0
+shipped,qwen-4b,qwen-9b,0.6,20,0.95,generation_config.json (thinking default),50,0.9348919175151259,0.014626719609366077
+shipped,qwen-4b,gemma-e2b,0.6,20,0.95,generation_config.json (thinking default),50,0.8123805048946642,0.02528888859962755
+shipped,qwen-4b,gemma-e4b,0.6,20,0.95,generation_config.json (thinking default),50,0.8292464882003098,0.02808215166670423
+shipped,qwen-4b,gemma-12b,0.6,20,0.95,generation_config.json (thinking default),50,0.8413397026451922,0.02258950518805605
+shipped,qwen-4b,llama-3.2-1b,0.6,20,0.95,generation_config.json (thinking default),50,0.8372095885868069,0.04671546226497183
+shipped,qwen-4b,llama-3.1-8b,0.6,20,0.95,generation_config.json (thinking default),50,0.865240476442298,0.02412817635669719
+shipped,qwen-4b,mistral-7b,0.6,20,0.95,generation_config.json (thinking default),50,0.8367053306095948,0.023978888628790437
+shipped,qwen-4b,gpt-6-astra,0.6,20,0.95,generation_config.json (thinking default),50,0.6619327596058554,0.040538634748480566
+shipped,qwen-4b,claude-opus-5.5,0.6,20,0.95,generation_config.json (thinking default),50,0.7231895337197698,0.03570450821438866
+shipped,qwen-4b,gemini-4-argon,0.6,20,0.95,generation_config.json (thinking default),50,0.7395313928414844,0.027566720295559573
+shipped,qwen-4b,qwen3.8-2.4t-a95b,0.6,20,0.95,generation_config.json (thinking default),50,0.7842968448750165,0.032830592495428364
+shipped,qwen-4b,deepseek-v4-pro-0813,0.6,20,0.95,generation_config.json (thinking default),50,0.7599595549671467,0.04268243617854557
+shipped,qwen-4b,deepseek-v4.1-flash-1017,0.6,20,0.95,generation_config.json (thinking default),50,0.7215462445977776,0.047786171131176496
+shipped,qwen-4b,glm-5.3,0.6,20,0.95,generation_config.json (thinking default),50,0.727714862475172,0.03746103874750449
+shipped,qwen-4b,kimi-k3,0.6,20,0.95,generation_config.json (thinking default),50,0.7326950804528216,0.03824959401141156
+shipped,qwen-4b,minimax-m3,0.6,20,0.95,generation_config.json (thinking default),50,0.7375840922512377,0.045305087173654876
+shipped,qwen-4b,mimo-v2.6-pro,0.6,20,0.95,generation_config.json (thinking default),49,0.7519172078357447,0.03456134137200981
+shipped,qwen-9b,human,0.6,20,0.95,generation_config.json (thinking default),50,0.7074197726452961,0.05046551582798266
+shipped,qwen-9b,qwen-2b,0.6,20,0.95,generation_config.json (thinking default),48,0.8501846281316143,0.02840817838459495
+shipped,qwen-9b,qwen-4b,0.6,20,0.95,generation_config.json (thinking default),50,0.9255562659374261,0.015385626951305945
+shipped,qwen-9b,qwen-9b,0.6,20,0.95,generation_config.json (thinking default),50,1.0,0.0
+shipped,qwen-9b,gemma-e2b,0.6,20,0.95,generation_config.json (thinking default),50,0.7992301837970534,0.03380316866174195
+shipped,qwen-9b,gemma-e4b,0.6,20,0.95,generation_config.json (thinking default),50,0.8132233276987648,0.025649740641685462
+shipped,qwen-9b,gemma-12b,0.6,20,0.95,generation_config.json (thinking default),50,0.8402926942585942,0.02445366563748723
+shipped,qwen-9b,llama-3.2-1b,0.6,20,0.95,generation_config.json (thinking default),50,0.8358861070869582,0.038907010004103224
+shipped,qwen-9b,llama-3.1-8b,0.6,20,0.95,generation_config.json (thinking default),50,0.8663923123844386,0.024019987874973402
+shipped,qwen-9b,mistral-7b,0.6,20,0.95,generation_config.json (thinking default),50,0.8412626006179695,0.02456153776457224
+shipped,qwen-9b,gpt-6-astra,0.6,20,0.95,generation_config.json (thinking default),50,0.6859284505254039,0.04316615528766904
+shipped,qwen-9b,claude-opus-5.5,0.6,20,0.95,generation_config.json (thinking default),50,0.7541402949676269,0.03206927752054011
+shipped,qwen-9b,gemini-4-argon,0.6,20,0.95,generation_config.json (thinking default),50,0.7547150394362546,0.02523351681742232
+shipped,qwen-9b,qwen3.8-2.4t-a95b,0.6,20,0.95,generation_config.json (thinking default),50,0.8076689040803301,0.028630563064338928
+shipped,qwen-9b,deepseek-v4-pro-0813,0.6,20,0.95,generation_config.json (thinking default),50,0.7857241601427337,0.03623585641296138
+shipped,qwen-9b,deepseek-v4.1-flash-1017,0.6,20,0.95,generation_config.json (thinking default),50,0.7513408881042785,0.043014693171340095
+shipped,qwen-9b,glm-5.3,0.6,20,0.95,generation_config.json (thinking default),50,0.7546933223605989,0.03326730345170019
+shipped,qwen-9b,kimi-k3,0.6,20,0.95,generation_config.json (thinking default),50,0.7643447552301614,0.033165309797036975
+shipped,qwen-9b,minimax-m3,0.6,20,0.95,generation_config.json (thinking default),50,0.7581886112774838,0.037263266019583595
+shipped,qwen-9b,mimo-v2.6-pro,0.6,20,0.95,generation_config.json (thinking default),49,0.7748495988480466,0.03268624498500393
+shipped,gemma-e2b,human,1.0,64,0.95,generation_config.json & model card,50,0.4677263329225992,0.07753713354990317
+shipped,gemma-e2b,qwen-2b,1.0,64,0.95,generation_config.json & model card,48,0.7183704487876791,0.04639901389096584
+shipped,gemma-e2b,qwen-4b,1.0,64,0.95,generation_config.json & model card,50,0.742479970927494,0.03321787766697384
+shipped,gemma-e2b,qwen-9b,1.0,64,0.95,generation_config.json & model card,50,0.7435832727100249,0.02641633572999513
+shipped,gemma-e2b,gemma-e2b,1.0,64,0.95,generation_config.json & model card,50,1.0,0.0
+shipped,gemma-e2b,gemma-e4b,1.0,64,0.95,generation_config.json & model card,50,0.85641022516823,0.03405258438797232
+shipped,gemma-e2b,gemma-12b,1.0,64,0.95,generation_config.json & model card,50,0.7405825058209927,0.03219023006804323
+shipped,gemma-e2b,llama-3.2-1b,1.0,64,0.95,generation_config.json & model card,50,0.6508532458796101,0.0752067809777041
+shipped,gemma-e2b,llama-3.1-8b,1.0,64,0.95,generation_config.json & model card,50,0.7158851759097185,0.045489366766851565
+shipped,gemma-e2b,mistral-7b,1.0,64,0.95,generation_config.json & model card,50,0.6987696810177269,0.04237885045923851
+shipped,gemma-e2b,gpt-6-astra,1.0,64,0.95,generation_config.json & model card,50,0.5161939850318138,0.047691173501041774
+shipped,gemma-e2b,claude-opus-5.5,1.0,64,0.95,generation_config.json & model card,50,0.5840259452890848,0.04612081954313191
+shipped,gemma-e2b,gemini-4-argon,1.0,64,0.95,generation_config.json & model card,50,0.6290163314996033,0.03162872062298173
+shipped,gemma-e2b,qwen3.8-2.4t-a95b,1.0,64,0.95,generation_config.json & model card,50,0.6526730462922774,0.037511575914239134
+shipped,gemma-e2b,deepseek-v4-pro-0813,1.0,64,0.95,generation_config.json & model card,50,0.6288705509797337,0.049797362338963355
+shipped,gemma-e2b,deepseek-v4.1-flash-1017,1.0,64,0.95,generation_config.json & model card,50,0.5653466612332336,0.05142441273962892
+shipped,gemma-e2b,glm-5.3,1.0,64,0.95,generation_config.json & model card,50,0.5924791229845922,0.03996005967613051
+shipped,gemma-e2b,kimi-k3,1.0,64,0.95,generation_config.json & model card,50,0.6076571337210646,0.04356336490955688
+shipped,gemma-e2b,minimax-m3,1.0,64,0.95,generation_config.json & model card,50,0.6036503056139436,0.06021185396814317
+shipped,gemma-e2b,mimo-v2.6-pro,1.0,64,0.95,generation_config.json & model card,49,0.6275983633266686,0.04568090102306224
+shipped,gemma-e4b,human,1.0,64,0.95,generation_config.json & model card,50,0.6277153448495494,0.06422227577773448
+shipped,gemma-e4b,qwen-2b,1.0,64,0.95,generation_config.json & model card,48,0.7988769682007398,0.03271536930616358
+shipped,gemma-e4b,qwen-4b,1.0,64,0.95,generation_config.json & model card,50,0.8485358801999878,0.02615086743867954
+shipped,gemma-e4b,qwen-9b,1.0,64,0.95,generation_config.json & model card,50,0.8518916423333128,0.019574856981011687
+shipped,gemma-e4b,gemma-e2b,1.0,64,0.95,generation_config.json & model card,50,0.9266995422016012,0.020508875536897935
+shipped,gemma-e4b,gemma-e4b,1.0,64,0.95,generation_config.json & model card,50,1.0,0.0
+shipped,gemma-e4b,gemma-12b,1.0,64,0.95,generation_config.json & model card,50,0.862578325732145,0.023301065325836864
+shipped,gemma-e4b,llama-3.2-1b,1.0,64,0.95,generation_config.json & model card,50,0.7496914798659197,0.0657230547813777
+shipped,gemma-e4b,llama-3.1-8b,1.0,64,0.95,generation_config.json & model card,50,0.808163623689095,0.03561576756930264
+shipped,gemma-e4b,mistral-7b,1.0,64,0.95,generation_config.json & model card,50,0.7874839098937164,0.03237314574872654
+shipped,gemma-e4b,gpt-6-astra,1.0,64,0.95,generation_config.json & model card,50,0.6233892676824331,0.040121518366318075
+shipped,gemma-e4b,claude-opus-5.5,1.0,64,0.95,generation_config.json & model card,50,0.7102654160566838,0.04065652472389107
+shipped,gemma-e4b,gemini-4-argon,1.0,64,0.95,generation_config.json & model card,50,0.7450105429878602,0.0257312021627328
+shipped,gemma-e4b,qwen3.8-2.4t-a95b,1.0,64,0.95,generation_config.json & model card,50,0.7737433498234637,0.02444821045683228
+shipped,gemma-e4b,deepseek-v4-pro-0813,1.0,64,0.95,generation_config.json & model card,50,0.7468891753624176,0.03800082987017627
+shipped,gemma-e4b,deepseek-v4.1-flash-1017,1.0,64,0.95,generation_config.json & model card,50,0.6879627049528807,0.03774099008195653
+shipped,gemma-e4b,glm-5.3,1.0,64,0.95,generation_config.json & model card,50,0.7103358929238195,0.033703530666005586
+shipped,gemma-e4b,kimi-k3,1.0,64,0.95,generation_config.json & model card,50,0.7285041365293499,0.03632283453409282
+shipped,gemma-e4b,minimax-m3,1.0,64,0.95,generation_config.json & model card,50,0.7238582526037375,0.058576901149804086
+shipped,gemma-e4b,mimo-v2.6-pro,1.0,64,0.95,generation_config.json & model card,49,0.7475364107948997,0.03410802217216048
+shipped,gemma-12b,human,1.0,64,0.95,generation_config.json & model card,50,0.7249753285023907,0.05514536329829922
+shipped,gemma-12b,qwen-2b,1.0,64,0.95,generation_config.json & model card,48,0.7776876550353783,0.04702862802873309
+shipped,gemma-12b,qwen-4b,1.0,64,0.95,generation_config.json & model card,50,0.795112655403037,0.023646509138156798
+shipped,gemma-12b,qwen-9b,1.0,64,0.95,generation_config.json & model card,50,0.8007512451462078,0.02248623072891498
+shipped,gemma-12b,gemma-e2b,1.0,64,0.95,generation_config.json & model card,50,0.7763777843262205,0.026326488596622153
+shipped,gemma-12b,gemma-e4b,1.0,64,0.95,generation_config.json & model card,50,0.788821134528314,0.03313737847686904
+shipped,gemma-12b,gemma-12b,1.0,64,0.95,generation_config.json & model card,50,1.0,0.0
+shipped,gemma-12b,llama-3.2-1b,1.0,64,0.95,generation_config.json & model card,50,0.8169446252957445,0.06420392117853264
+shipped,gemma-12b,llama-3.1-8b,1.0,64,0.95,generation_config.json & model card,50,0.8435178852921312,0.023783749288297493
+shipped,gemma-12b,mistral-7b,1.0,64,0.95,generation_config.json & model card,50,0.8184755276757661,0.034711895645645835
+shipped,gemma-12b,gpt-6-astra,1.0,64,0.95,generation_config.json & model card,50,0.6047530652572752,0.04853191952078529
+shipped,gemma-12b,claude-opus-5.5,1.0,64,0.95,generation_config.json & model card,50,0.6846142210460815,0.041172334680546166
+shipped,gemma-12b,gemini-4-argon,1.0,64,0.95,generation_config.json & model card,50,0.726450706746497,0.03134203846830094
+shipped,gemma-12b,qwen3.8-2.4t-a95b,1.0,64,0.95,generation_config.json & model card,50,0.7424875289173086,0.03160247756492692
+shipped,gemma-12b,deepseek-v4-pro-0813,1.0,64,0.95,generation_config.json & model card,50,0.7132732767881967,0.042180488111171054
+shipped,gemma-12b,deepseek-v4.1-flash-1017,1.0,64,0.95,generation_config.json & model card,50,0.6469936218849895,0.04769757077683534
+shipped,gemma-12b,glm-5.3,1.0,64,0.95,generation_config.json & model card,50,0.6828429072094621,0.03606758434698025
+shipped,gemma-12b,kimi-k3,1.0,64,0.95,generation_config.json & model card,50,0.6966327413414821,0.04275393093394916
+shipped,gemma-12b,minimax-m3,1.0,64,0.95,generation_config.json & model card,50,0.6838565132327465,0.04906322810369017
+shipped,gemma-12b,mimo-v2.6-pro,1.0,64,0.95,generation_config.json & model card,49,0.7108816502135614,0.032255656533300904
+shipped,llama-3.2-1b,human,0.6,100,0.9,generation_config.json,50,0.5940284003882278,0.049355526176382
+shipped,llama-3.2-1b,qwen-2b,0.6,100,0.9,generation_config.json,48,0.7389512376502957,0.04053289340365369
+shipped,llama-3.2-1b,qwen-4b,0.6,100,0.9,generation_config.json,50,0.6747730894704315,0.02839959337992736
+shipped,llama-3.2-1b,qwen-9b,0.6,100,0.9,generation_config.json,50,0.659361216050598,0.024729497374028638
+shipped,llama-3.2-1b,qwen-27b-int8,0.6,100,0.9,generation_config.json,50,0.6553643732899106,0.028655149766130813
+shipped,llama-3.2-1b,qwen-32b-int8,0.6,100,0.9,generation_config.json,50,0.6996012878120476,0.03734002381088573
+shipped,llama-3.2-1b,gemma-e2b,0.6,100,0.9,generation_config.json,50,0.6725519702645201,0.039743295783076074
+shipped,llama-3.2-1b,gemma-e4b,0.6,100,0.9,generation_config.json,50,0.6480504236212624,0.033952223173600665
+shipped,llama-3.2-1b,gemma-12b,0.6,100,0.9,generation_config.json,50,0.6472182243794912,0.030054983053711355
+shipped,llama-3.2-1b,llama-3.2-1b,0.6,100,0.9,generation_config.json,50,1.0,0.0
+shipped,llama-3.2-1b,llama-3.1-8b,0.6,100,0.9,generation_config.json,50,0.8688645719766583,0.024880452857092374
+shipped,llama-3.2-1b,mistral-7b,0.6,100,0.9,generation_config.json,50,0.765480639041166,0.035164205336069516
+shipped,llama-3.2-1b,gpt-6-astra,0.6,100,0.9,generation_config.json,50,0.5309167186315017,0.03601054345678306
+shipped,llama-3.2-1b,claude-opus-5.5,0.6,100,0.9,generation_config.json,50,0.5739412656662981,0.03402103051266508
+shipped,llama-3.2-1b,gemini-4-argon,0.6,100,0.9,generation_config.json,50,0.5952952531226701,0.02658303465055765
+shipped,llama-3.2-1b,qwen3.8-2.4t-a95b,0.6,100,0.9,generation_config.json,50,0.6138538605179784,0.03085984111202801
+shipped,llama-3.2-1b,deepseek-v4-pro-0813,0.6,100,0.9,generation_config.json,50,0.5966319477344968,0.039686063093432894
+shipped,llama-3.2-1b,deepseek-v4.1-flash-1017,0.6,100,0.9,generation_config.json,50,0.5600124978273459,0.03775683704181834
+shipped,llama-3.2-1b,glm-5.3,0.6,100,0.9,generation_config.json,50,0.5581962723327556,0.034124222412472115
+shipped,llama-3.2-1b,kimi-k3,0.6,100,0.9,generation_config.json,50,0.5738941077540518,0.035625978034380716
+shipped,llama-3.2-1b,minimax-m3,0.6,100,0.9,generation_config.json,50,0.5824660784716182,0.0403498134936049
+shipped,llama-3.2-1b,mimo-v2.6-pro,0.6,100,0.9,generation_config.json,49,0.5948185737438227,0.039706219725454184
+shipped,llama-3.1-8b,human,0.6,100,0.9,generation_config.json,50,0.6744828135446188,0.03933469369299457
+shipped,llama-3.1-8b,qwen-2b,0.6,100,0.9,generation_config.json,48,0.7585661577371189,0.031874016399247224
+shipped,llama-3.1-8b,qwen-4b,0.6,100,0.9,generation_config.json,50,0.7450979994944339,0.021614984173449606
+shipped,llama-3.1-8b,qwen-9b,0.6,100,0.9,generation_config.json,50,0.7440494203249256,0.021885097839651174
+shipped,llama-3.1-8b,qwen-27b-int8,0.6,100,0.9,generation_config.json,50,0.744280408765175,0.021933187280133416
+shipped,llama-3.1-8b,qwen-32b-int8,0.6,100,0.9,generation_config.json,50,0.7836255984879631,0.03011211666277658
+shipped,llama-3.1-8b,gemma-e2b,0.6,100,0.9,generation_config.json,50,0.7308242823203588,0.034020757808166095
+shipped,llama-3.1-8b,gemma-e4b,0.6,100,0.9,generation_config.json,50,0.7271696761134774,0.03373419633021
+shipped,llama-3.1-8b,gemma-12b,0.6,100,0.9,generation_config.json,50,0.7276551076441834,0.025366572190805237
+shipped,llama-3.1-8b,llama-3.2-1b,0.6,100,0.9,generation_config.json,50,0.8518718908677306,0.05183695922307729
+shipped,llama-3.1-8b,llama-3.1-8b,0.6,100,0.9,generation_config.json,50,1.0,0.0
+shipped,llama-3.1-8b,mistral-7b,0.6,100,0.9,generation_config.json,50,0.8340848112347723,0.026529611170236212
+shipped,llama-3.1-8b,gpt-6-astra,0.6,100,0.9,generation_config.json,50,0.6280520753032329,0.032615185308811814
+shipped,llama-3.1-8b,claude-opus-5.5,0.6,100,0.9,generation_config.json,50,0.6775203893260027,0.030417077095445402
+shipped,llama-3.1-8b,gemini-4-argon,0.6,100,0.9,generation_config.json,50,0.6860929893393023,0.01966633249182699
+shipped,llama-3.1-8b,qwen3.8-2.4t-a95b,0.6,100,0.9,generation_config.json,50,0.7142118962566052,0.0247252465859416
+shipped,llama-3.1-8b,deepseek-v4-pro-0813,0.6,100,0.9,generation_config.json,50,0.701047346778952,0.03293719143185526
+shipped,llama-3.1-8b,deepseek-v4.1-flash-1017,0.6,100,0.9,generation_config.json,50,0.6606925584807783,0.03260401997709361
+shipped,llama-3.1-8b,glm-5.3,0.6,100,0.9,generation_config.json,50,0.6665044648222436,0.02697072127239937
+shipped,llama-3.1-8b,kimi-k3,0.6,100,0.9,generation_config.json,50,0.6732174701978897,0.02974979619900417
+shipped,llama-3.1-8b,minimax-m3,0.6,100,0.9,generation_config.json,50,0.6760261380520116,0.03653158487980334
+shipped,llama-3.1-8b,mimo-v2.6-pro,0.6,100,0.9,generation_config.json,49,0.6889330751031778,0.033580032842176526
+shipped,mistral-7b,human,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.7409829189531478,0.045569261259448865
+shipped,mistral-7b,qwen-2b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,48,0.8817653857431189,0.02205522235321936
+shipped,mistral-7b,qwen-4b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8843543194288463,0.018252403896413055
+shipped,mistral-7b,qwen-9b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8822288580740671,0.016929906734493804
+shipped,mistral-7b,qwen-27b-int8,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8789204706799296,0.01847248798691699
+shipped,mistral-7b,qwen-32b-int8,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.9052087758476864,0.02377171696991258
+shipped,mistral-7b,gemma-e2b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8706515531173786,0.019289609844120238
+shipped,mistral-7b,gemma-e4b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8674187752186061,0.021801685375107717
+shipped,mistral-7b,gemma-12b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8639061450803269,0.019399887485818123
+shipped,mistral-7b,llama-3.2-1b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8877448698544009,0.09616683595359925
+shipped,mistral-7b,llama-3.1-8b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.9456108762691489,0.012655916911573936
+shipped,mistral-7b,mistral-7b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.9964928837664665,0.0005633068824053375
+shipped,mistral-7b,gpt-6-astra,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.7815131298002642,0.02797727800797453
+shipped,mistral-7b,claude-opus-5.5,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8309135283382924,0.019764048702361148
+shipped,mistral-7b,gemini-4-argon,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8282533943237259,0.018964278832084274
+shipped,mistral-7b,qwen3.8-2.4t-a95b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8497109302516839,0.024500384036981696
+shipped,mistral-7b,deepseek-v4-pro-0813,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8376574737876973,0.022879333439106954
+shipped,mistral-7b,deepseek-v4.1-flash-1017,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8024399761017686,0.02498750711051789
+shipped,mistral-7b,glm-5.3,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8263497017244897,0.021953047198542516
+shipped,mistral-7b,kimi-k3,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8287039504089619,0.030389623922043744
+shipped,mistral-7b,minimax-m3,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8244371269494327,0.03328850922117541
+shipped,mistral-7b,mimo-v2.6-pro,1.0,100,0.95,none shipped; fallback top-100 p=0.95,49,0.8365855907738214,0.027367995718010105
+card_nonthinking,qwen-2b,human,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.5669223552337274,0.059409683813859214
+card_nonthinking,qwen-2b,qwen-2b,0.7,20,0.8,Qwen3.5 card non-thinking mode,48,0.9998506571087216,0.0010346779017735167
+card_nonthinking,qwen-2b,qwen-4b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.8166464227704195,0.022517746337135765
+card_nonthinking,qwen-2b,qwen-9b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7858483969312979,0.0253356183042146
+card_nonthinking,qwen-2b,gemma-e2b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7562558743849342,0.030300829003097274
+card_nonthinking,qwen-2b,gemma-e4b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7288975301358858,0.039825487526789397
+card_nonthinking,qwen-2b,gemma-12b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7385737640322004,0.03709501815476732
+card_nonthinking,qwen-2b,llama-3.2-1b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7774544134276214,0.06645108596865483
+card_nonthinking,qwen-2b,llama-3.1-8b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7880690190911471,0.0310121943494101
+card_nonthinking,qwen-2b,mistral-7b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7527245686448333,0.032649808183565325
+card_nonthinking,qwen-2b,gpt-6-astra,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.5366622898223615,0.05025206955575542
+card_nonthinking,qwen-2b,claude-opus-5.5,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.5927811879248753,0.04444997604681843
+card_nonthinking,qwen-2b,gemini-4-argon,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6329040964661055,0.03176984982385821
+card_nonthinking,qwen-2b,qwen3.8-2.4t-a95b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6649313605203743,0.03976600191657391
+card_nonthinking,qwen-2b,deepseek-v4-pro-0813,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6483887845445021,0.051447213449549396
+card_nonthinking,qwen-2b,deepseek-v4.1-flash-1017,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.5826616508727692,0.05574414585085816
+card_nonthinking,qwen-2b,glm-5.3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.5883173405552948,0.04764829037994817
+card_nonthinking,qwen-2b,kimi-k3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6026274559798722,0.04381287477586561
+card_nonthinking,qwen-2b,minimax-m3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6218627223164266,0.05317459756190548
+card_nonthinking,qwen-2b,mimo-v2.6-pro,0.7,20,0.8,Qwen3.5 card non-thinking mode,49,0.6358985743958194,0.04404837886611575
+card_nonthinking,qwen-4b,human,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6043474441939225,0.054294516429653335
+card_nonthinking,qwen-4b,qwen-2b,0.7,20,0.8,Qwen3.5 card non-thinking mode,48,0.8117469662009288,0.03419257268539391
+card_nonthinking,qwen-4b,qwen-4b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,1.0,0.0
+card_nonthinking,qwen-4b,qwen-9b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.8726988992843948,0.0200640658824263
+card_nonthinking,qwen-4b,gemma-e2b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7277543240958306,0.035199895133631386
+card_nonthinking,qwen-4b,gemma-e4b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7484151477612444,0.03770804592734981
+card_nonthinking,qwen-4b,gemma-12b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7654322046639791,0.030936939552796146
+card_nonthinking,qwen-4b,llama-3.2-1b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7554297068221413,0.06687254177178295
+card_nonthinking,qwen-4b,llama-3.1-8b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7890437963556631,0.030528701868275113
+card_nonthinking,qwen-4b,mistral-7b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7587822693092906,0.030314043697962312
+card_nonthinking,qwen-4b,gpt-6-astra,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.5769822094335726,0.04460198348538663
+card_nonthinking,qwen-4b,claude-opus-5.5,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6402285411913468,0.04171888468594454
+card_nonthinking,qwen-4b,gemini-4-argon,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6629481449137872,0.02850403716853327
+card_nonthinking,qwen-4b,qwen3.8-2.4t-a95b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7014659125184063,0.038673490595607346
+card_nonthinking,qwen-4b,deepseek-v4-pro-0813,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6810259036940994,0.04762312561112583
+card_nonthinking,qwen-4b,deepseek-v4.1-flash-1017,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6355911327437165,0.05249007905242712
+card_nonthinking,qwen-4b,glm-5.3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6422734519251092,0.042011774293598945
+card_nonthinking,qwen-4b,kimi-k3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6515296011387988,0.04298745682362371
+card_nonthinking,qwen-4b,minimax-m3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6541189695608347,0.05194909951927258
+card_nonthinking,qwen-4b,mimo-v2.6-pro,0.7,20,0.8,Qwen3.5 card non-thinking mode,49,0.668282659991069,0.041472187381934984
+card_nonthinking,qwen-9b,human,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6229279798768141,0.056600065237561704
+card_nonthinking,qwen-9b,qwen-2b,0.7,20,0.8,Qwen3.5 card non-thinking mode,48,0.7715050838861205,0.03163012810320461
+card_nonthinking,qwen-9b,qwen-4b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.8600590717858809,0.020741826540474025
+card_nonthinking,qwen-9b,qwen-9b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,1.0,0.0
+card_nonthinking,qwen-9b,gemma-e2b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7157850780649361,0.0364010833090165
+card_nonthinking,qwen-9b,gemma-e4b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7334424820489935,0.03465011477569256
+card_nonthinking,qwen-9b,gemma-12b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.763133312408018,0.0327999266674674
+card_nonthinking,qwen-9b,llama-3.2-1b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7496344021416292,0.08550887800523448
+card_nonthinking,qwen-9b,llama-3.1-8b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7970547533281512,0.02954637044116594
+card_nonthinking,qwen-9b,mistral-7b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.768650392751605,0.031741441430583904
+card_nonthinking,qwen-9b,gpt-6-astra,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6057525782327768,0.04725310324008568
+card_nonthinking,qwen-9b,claude-opus-5.5,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6759526647856062,0.03887307376095447
+card_nonthinking,qwen-9b,gemini-4-argon,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6768639965180989,0.026277209787559548
+card_nonthinking,qwen-9b,qwen3.8-2.4t-a95b,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7300974053708112,0.035105080971519514
+card_nonthinking,qwen-9b,deepseek-v4-pro-0813,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.7031163922642419,0.04369978220746702
+card_nonthinking,qwen-9b,deepseek-v4.1-flash-1017,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.667261441457083,0.044491059684502295
+card_nonthinking,qwen-9b,glm-5.3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6692717511985579,0.03685626930840443
+card_nonthinking,qwen-9b,kimi-k3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6841486421488584,0.03660730309213059
+card_nonthinking,qwen-9b,minimax-m3,0.7,20,0.8,Qwen3.5 card non-thinking mode,50,0.6772197810844967,0.04195966308666735
+card_nonthinking,qwen-9b,mimo-v2.6-pro,0.7,20,0.8,Qwen3.5 card non-thinking mode,49,0.6917649731962352,0.040747752695876285
+card_nonthinking,gemma-e2b,human,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.4677263329225992,0.07753713354990317
+card_nonthinking,gemma-e2b,qwen-2b,1.0,64,0.95,Gemma 4 card & generation_config.json,48,0.7183704487876791,0.04639901389096584
+card_nonthinking,gemma-e2b,qwen-4b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.742479970927494,0.03321787766697384
+card_nonthinking,gemma-e2b,qwen-9b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7435832727100249,0.02641633572999513
+card_nonthinking,gemma-e2b,gemma-e2b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,1.0,0.0
+card_nonthinking,gemma-e2b,gemma-e4b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.85641022516823,0.03405258438797232
+card_nonthinking,gemma-e2b,gemma-12b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7405825058209927,0.03219023006804323
+card_nonthinking,gemma-e2b,llama-3.2-1b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6508532458796101,0.0752067809777041
+card_nonthinking,gemma-e2b,llama-3.1-8b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7158851759097185,0.045489366766851565
+card_nonthinking,gemma-e2b,mistral-7b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6987696810177269,0.04237885045923851
+card_nonthinking,gemma-e2b,gpt-6-astra,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.5161939850318138,0.047691173501041774
+card_nonthinking,gemma-e2b,claude-opus-5.5,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.5840259452890848,0.04612081954313191
+card_nonthinking,gemma-e2b,gemini-4-argon,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6290163314996033,0.03162872062298173
+card_nonthinking,gemma-e2b,qwen3.8-2.4t-a95b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6526730462922774,0.037511575914239134
+card_nonthinking,gemma-e2b,deepseek-v4-pro-0813,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6288705509797337,0.049797362338963355
+card_nonthinking,gemma-e2b,deepseek-v4.1-flash-1017,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.5653466612332336,0.05142441273962892
+card_nonthinking,gemma-e2b,glm-5.3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.5924791229845922,0.03996005967613051
+card_nonthinking,gemma-e2b,kimi-k3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6076571337210646,0.04356336490955688
+card_nonthinking,gemma-e2b,minimax-m3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6036503056139436,0.06021185396814317
+card_nonthinking,gemma-e2b,mimo-v2.6-pro,1.0,64,0.95,Gemma 4 card & generation_config.json,49,0.6275983633266686,0.04568090102306224
+card_nonthinking,gemma-e4b,human,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6277153448495494,0.06422227577773448
+card_nonthinking,gemma-e4b,qwen-2b,1.0,64,0.95,Gemma 4 card & generation_config.json,48,0.7988769682007398,0.03271536930616358
+card_nonthinking,gemma-e4b,qwen-4b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.8485358801999878,0.02615086743867954
+card_nonthinking,gemma-e4b,qwen-9b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.8518916423333128,0.019574856981011687
+card_nonthinking,gemma-e4b,gemma-e2b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.9266995422016012,0.020508875536897935
+card_nonthinking,gemma-e4b,gemma-e4b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,1.0,0.0
+card_nonthinking,gemma-e4b,gemma-12b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.862578325732145,0.023301065325836864
+card_nonthinking,gemma-e4b,llama-3.2-1b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7496914798659197,0.0657230547813777
+card_nonthinking,gemma-e4b,llama-3.1-8b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.808163623689095,0.03561576756930264
+card_nonthinking,gemma-e4b,mistral-7b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7874839098937164,0.03237314574872654
+card_nonthinking,gemma-e4b,gpt-6-astra,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6233892676824331,0.040121518366318075
+card_nonthinking,gemma-e4b,claude-opus-5.5,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7102654160566838,0.04065652472389107
+card_nonthinking,gemma-e4b,gemini-4-argon,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7450105429878602,0.0257312021627328
+card_nonthinking,gemma-e4b,qwen3.8-2.4t-a95b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7737433498234637,0.02444821045683228
+card_nonthinking,gemma-e4b,deepseek-v4-pro-0813,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7468891753624176,0.03800082987017627
+card_nonthinking,gemma-e4b,deepseek-v4.1-flash-1017,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6879627049528807,0.03774099008195653
+card_nonthinking,gemma-e4b,glm-5.3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7103358929238195,0.033703530666005586
+card_nonthinking,gemma-e4b,kimi-k3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7285041365293499,0.03632283453409282
+card_nonthinking,gemma-e4b,minimax-m3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7238582526037375,0.058576901149804086
+card_nonthinking,gemma-e4b,mimo-v2.6-pro,1.0,64,0.95,Gemma 4 card & generation_config.json,49,0.7475364107948997,0.03410802217216048
+card_nonthinking,gemma-12b,human,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7249753285023907,0.05514536329829922
+card_nonthinking,gemma-12b,qwen-2b,1.0,64,0.95,Gemma 4 card & generation_config.json,48,0.7776876550353783,0.04702862802873309
+card_nonthinking,gemma-12b,qwen-4b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.795112655403037,0.023646509138156798
+card_nonthinking,gemma-12b,qwen-9b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.8007512451462078,0.02248623072891498
+card_nonthinking,gemma-12b,gemma-e2b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7763777843262205,0.026326488596622153
+card_nonthinking,gemma-12b,gemma-e4b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.788821134528314,0.03313737847686904
+card_nonthinking,gemma-12b,gemma-12b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,1.0,0.0
+card_nonthinking,gemma-12b,llama-3.2-1b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.8169446252957445,0.06420392117853264
+card_nonthinking,gemma-12b,llama-3.1-8b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.8435178852921312,0.023783749288297493
+card_nonthinking,gemma-12b,mistral-7b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.8184755276757661,0.034711895645645835
+card_nonthinking,gemma-12b,gpt-6-astra,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6047530652572752,0.04853191952078529
+card_nonthinking,gemma-12b,claude-opus-5.5,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6846142210460815,0.041172334680546166
+card_nonthinking,gemma-12b,gemini-4-argon,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.726450706746497,0.03134203846830094
+card_nonthinking,gemma-12b,qwen3.8-2.4t-a95b,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7424875289173086,0.03160247756492692
+card_nonthinking,gemma-12b,deepseek-v4-pro-0813,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.7132732767881967,0.042180488111171054
+card_nonthinking,gemma-12b,deepseek-v4.1-flash-1017,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6469936218849895,0.04769757077683534
+card_nonthinking,gemma-12b,glm-5.3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6828429072094621,0.03606758434698025
+card_nonthinking,gemma-12b,kimi-k3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6966327413414821,0.04275393093394916
+card_nonthinking,gemma-12b,minimax-m3,1.0,64,0.95,Gemma 4 card & generation_config.json,50,0.6838565132327465,0.04906322810369017
+card_nonthinking,gemma-12b,mimo-v2.6-pro,1.0,64,0.95,Gemma 4 card & generation_config.json,49,0.7108816502135614,0.032255656533300904
+card_nonthinking,llama-3.2-1b,human,0.6,100,0.9,generation_config.json,50,0.5940284003882278,0.049355526176382
+card_nonthinking,llama-3.2-1b,qwen-2b,0.6,100,0.9,generation_config.json,48,0.7389512376502957,0.04053289340365369
+card_nonthinking,llama-3.2-1b,qwen-4b,0.6,100,0.9,generation_config.json,50,0.6747730894704315,0.02839959337992736
+card_nonthinking,llama-3.2-1b,qwen-9b,0.6,100,0.9,generation_config.json,50,0.659361216050598,0.024729497374028638
+card_nonthinking,llama-3.2-1b,qwen-27b-int8,0.6,100,0.9,generation_config.json,50,0.6553643732899106,0.028655149766130813
+card_nonthinking,llama-3.2-1b,qwen-32b-int8,0.6,100,0.9,generation_config.json,50,0.6996012878120476,0.03734002381088573
+card_nonthinking,llama-3.2-1b,gemma-e2b,0.6,100,0.9,generation_config.json,50,0.6725519702645201,0.039743295783076074
+card_nonthinking,llama-3.2-1b,gemma-e4b,0.6,100,0.9,generation_config.json,50,0.6480504236212624,0.033952223173600665
+card_nonthinking,llama-3.2-1b,gemma-12b,0.6,100,0.9,generation_config.json,50,0.6472182243794912,0.030054983053711355
+card_nonthinking,llama-3.2-1b,llama-3.2-1b,0.6,100,0.9,generation_config.json,50,1.0,0.0
+card_nonthinking,llama-3.2-1b,llama-3.1-8b,0.6,100,0.9,generation_config.json,50,0.8688645719766583,0.024880452857092374
+card_nonthinking,llama-3.2-1b,mistral-7b,0.6,100,0.9,generation_config.json,50,0.765480639041166,0.035164205336069516
+card_nonthinking,llama-3.2-1b,gpt-6-astra,0.6,100,0.9,generation_config.json,50,0.5309167186315017,0.03601054345678306
+card_nonthinking,llama-3.2-1b,claude-opus-5.5,0.6,100,0.9,generation_config.json,50,0.5739412656662981,0.03402103051266508
+card_nonthinking,llama-3.2-1b,gemini-4-argon,0.6,100,0.9,generation_config.json,50,0.5952952531226701,0.02658303465055765
+card_nonthinking,llama-3.2-1b,qwen3.8-2.4t-a95b,0.6,100,0.9,generation_config.json,50,0.6138538605179784,0.03085984111202801
+card_nonthinking,llama-3.2-1b,deepseek-v4-pro-0813,0.6,100,0.9,generation_config.json,50,0.5966319477344968,0.039686063093432894
+card_nonthinking,llama-3.2-1b,deepseek-v4.1-flash-1017,0.6,100,0.9,generation_config.json,50,0.5600124978273459,0.03775683704181834
+card_nonthinking,llama-3.2-1b,glm-5.3,0.6,100,0.9,generation_config.json,50,0.5581962723327556,0.034124222412472115
+card_nonthinking,llama-3.2-1b,kimi-k3,0.6,100,0.9,generation_config.json,50,0.5738941077540518,0.035625978034380716
+card_nonthinking,llama-3.2-1b,minimax-m3,0.6,100,0.9,generation_config.json,50,0.5824660784716182,0.0403498134936049
+card_nonthinking,llama-3.2-1b,mimo-v2.6-pro,0.6,100,0.9,generation_config.json,49,0.5948185737438227,0.039706219725454184
+card_nonthinking,llama-3.1-8b,human,0.6,100,0.9,generation_config.json,50,0.6744828135446188,0.03933469369299457
+card_nonthinking,llama-3.1-8b,qwen-2b,0.6,100,0.9,generation_config.json,48,0.7585661577371189,0.031874016399247224
+card_nonthinking,llama-3.1-8b,qwen-4b,0.6,100,0.9,generation_config.json,50,0.7450979994944339,0.021614984173449606
+card_nonthinking,llama-3.1-8b,qwen-9b,0.6,100,0.9,generation_config.json,50,0.7440494203249256,0.021885097839651174
+card_nonthinking,llama-3.1-8b,qwen-27b-int8,0.6,100,0.9,generation_config.json,50,0.744280408765175,0.021933187280133416
+card_nonthinking,llama-3.1-8b,qwen-32b-int8,0.6,100,0.9,generation_config.json,50,0.7836255984879631,0.03011211666277658
+card_nonthinking,llama-3.1-8b,gemma-e2b,0.6,100,0.9,generation_config.json,50,0.7308242823203588,0.034020757808166095
+card_nonthinking,llama-3.1-8b,gemma-e4b,0.6,100,0.9,generation_config.json,50,0.7271696761134774,0.03373419633021
+card_nonthinking,llama-3.1-8b,gemma-12b,0.6,100,0.9,generation_config.json,50,0.7276551076441834,0.025366572190805237
+card_nonthinking,llama-3.1-8b,llama-3.2-1b,0.6,100,0.9,generation_config.json,50,0.8518718908677306,0.05183695922307729
+card_nonthinking,llama-3.1-8b,llama-3.1-8b,0.6,100,0.9,generation_config.json,50,1.0,0.0
+card_nonthinking,llama-3.1-8b,mistral-7b,0.6,100,0.9,generation_config.json,50,0.8340848112347723,0.026529611170236212
+card_nonthinking,llama-3.1-8b,gpt-6-astra,0.6,100,0.9,generation_config.json,50,0.6280520753032329,0.032615185308811814
+card_nonthinking,llama-3.1-8b,claude-opus-5.5,0.6,100,0.9,generation_config.json,50,0.6775203893260027,0.030417077095445402
+card_nonthinking,llama-3.1-8b,gemini-4-argon,0.6,100,0.9,generation_config.json,50,0.6860929893393023,0.01966633249182699
+card_nonthinking,llama-3.1-8b,qwen3.8-2.4t-a95b,0.6,100,0.9,generation_config.json,50,0.7142118962566052,0.0247252465859416
+card_nonthinking,llama-3.1-8b,deepseek-v4-pro-0813,0.6,100,0.9,generation_config.json,50,0.701047346778952,0.03293719143185526
+card_nonthinking,llama-3.1-8b,deepseek-v4.1-flash-1017,0.6,100,0.9,generation_config.json,50,0.6606925584807783,0.03260401997709361
+card_nonthinking,llama-3.1-8b,glm-5.3,0.6,100,0.9,generation_config.json,50,0.6665044648222436,0.02697072127239937
+card_nonthinking,llama-3.1-8b,kimi-k3,0.6,100,0.9,generation_config.json,50,0.6732174701978897,0.02974979619900417
+card_nonthinking,llama-3.1-8b,minimax-m3,0.6,100,0.9,generation_config.json,50,0.6760261380520116,0.03653158487980334
+card_nonthinking,llama-3.1-8b,mimo-v2.6-pro,0.6,100,0.9,generation_config.json,49,0.6889330751031778,0.033580032842176526
+card_nonthinking,mistral-7b,human,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.7409829189531478,0.045569261259448865
+card_nonthinking,mistral-7b,qwen-2b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,48,0.8817653857431189,0.02205522235321936
+card_nonthinking,mistral-7b,qwen-4b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8843543194288463,0.018252403896413055
+card_nonthinking,mistral-7b,qwen-9b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8822288580740671,0.016929906734493804
+card_nonthinking,mistral-7b,qwen-27b-int8,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8789204706799296,0.01847248798691699
+card_nonthinking,mistral-7b,qwen-32b-int8,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.9052087758476864,0.02377171696991258
+card_nonthinking,mistral-7b,gemma-e2b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8706515531173786,0.019289609844120238
+card_nonthinking,mistral-7b,gemma-e4b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8674187752186061,0.021801685375107717
+card_nonthinking,mistral-7b,gemma-12b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8639061450803269,0.019399887485818123
+card_nonthinking,mistral-7b,llama-3.2-1b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8877448698544009,0.09616683595359925
+card_nonthinking,mistral-7b,llama-3.1-8b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.9456108762691489,0.012655916911573936
+card_nonthinking,mistral-7b,mistral-7b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.9964928837664665,0.0005633068824053375
+card_nonthinking,mistral-7b,gpt-6-astra,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.7815131298002642,0.02797727800797453
+card_nonthinking,mistral-7b,claude-opus-5.5,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8309135283382924,0.019764048702361148
+card_nonthinking,mistral-7b,gemini-4-argon,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8282533943237259,0.018964278832084274
+card_nonthinking,mistral-7b,qwen3.8-2.4t-a95b,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8497109302516839,0.024500384036981696
+card_nonthinking,mistral-7b,deepseek-v4-pro-0813,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8376574737876973,0.022879333439106954
+card_nonthinking,mistral-7b,deepseek-v4.1-flash-1017,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8024399761017686,0.02498750711051789
+card_nonthinking,mistral-7b,glm-5.3,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8263497017244897,0.021953047198542516
+card_nonthinking,mistral-7b,kimi-k3,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8287039504089619,0.030389623922043744
+card_nonthinking,mistral-7b,minimax-m3,1.0,100,0.95,none shipped; fallback top-100 p=0.95,50,0.8244371269494327,0.03328850922117541
+card_nonthinking,mistral-7b,mimo-v2.6-pro,1.0,100,0.95,none shipped; fallback top-100 p=0.95,49,0.8365855907738214,0.027367995718010105
+unscaled_T1,qwen-2b,human,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.7631903837602937,0.05240138400047342
+unscaled_T1,qwen-2b,qwen-2b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",48,1.0,0.0
+unscaled_T1,qwen-2b,qwen-4b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9680314988299524,0.01049152518851325
+unscaled_T1,qwen-2b,qwen-9b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9546265948033767,0.013690598270032812
+unscaled_T1,qwen-2b,gemma-e2b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9402808780693774,0.016432149437281093
+unscaled_T1,qwen-2b,gemma-e4b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9228697514154515,0.02006618482664744
+unscaled_T1,qwen-2b,gemma-12b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9213904727895533,0.02271364052980626
+unscaled_T1,qwen-2b,llama-3.2-1b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9480314840126921,0.036143297829736125
+unscaled_T1,qwen-2b,llama-3.1-8b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.953078117694634,0.011496314710394771
+unscaled_T1,qwen-2b,mistral-7b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9364587401465495,0.0157142813806947
+unscaled_T1,qwen-2b,gpt-6-astra,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.761076189449781,0.04248051934133053
+unscaled_T1,qwen-2b,claude-opus-5.5,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.815977041372092,0.03228551678021296
+unscaled_T1,qwen-2b,gemini-4-argon,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8421942983273517,0.024544252964143774
+unscaled_T1,qwen-2b,qwen3.8-2.4t-a95b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8657099808994161,0.028115052898006702
+unscaled_T1,qwen-2b,deepseek-v4-pro-0813,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8518083723196201,0.03412371880517089
+unscaled_T1,qwen-2b,deepseek-v4.1-flash-1017,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8046865947138445,0.046683548327818236
+unscaled_T1,qwen-2b,glm-5.3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8131507291548182,0.034224484313998715
+unscaled_T1,qwen-2b,kimi-k3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8237218790479867,0.031802242501294625
+unscaled_T1,qwen-2b,minimax-m3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8349626321473036,0.03999959095497837
+unscaled_T1,qwen-2b,mimo-v2.6-pro,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",49,0.8513757458381662,0.03507272909277864
+unscaled_T1,qwen-4b,human,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.7921988304940757,0.05002291332228492
+unscaled_T1,qwen-4b,qwen-2b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",48,0.9652304525007537,0.010670438434299396
+unscaled_T1,qwen-4b,qwen-4b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,1.0,0.0
+unscaled_T1,qwen-4b,qwen-9b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9842125931491508,0.005932746044234747
+unscaled_T1,qwen-4b,gemma-e2b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9184961939659597,0.017112681138419895
+unscaled_T1,qwen-4b,gemma-e4b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9229667642855969,0.018066390977549567
+unscaled_T1,qwen-4b,gemma-12b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9322236522776328,0.01609631821409331
+unscaled_T1,qwen-4b,llama-3.2-1b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9257847839831568,0.03272773182270443
+unscaled_T1,qwen-4b,llama-3.1-8b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9463542983703442,0.014122033074378443
+unscaled_T1,qwen-4b,mistral-7b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9326358742978489,0.016089916303454504
+unscaled_T1,qwen-4b,gpt-6-astra,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.7923400702583162,0.03530537284278395
+unscaled_T1,qwen-4b,claude-opus-5.5,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.843008374337017,0.026693396799905855
+unscaled_T1,qwen-4b,gemini-4-argon,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8581519719974965,0.021197051921822453
+unscaled_T1,qwen-4b,qwen3.8-2.4t-a95b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8934542947392577,0.020619303250964463
+unscaled_T1,qwen-4b,deepseek-v4-pro-0813,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8754283495797871,0.029062593828569763
+unscaled_T1,qwen-4b,deepseek-v4.1-flash-1017,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8464242033947325,0.0337583000139856
+unscaled_T1,qwen-4b,glm-5.3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8501528658097619,0.0294623648368367
+unscaled_T1,qwen-4b,kimi-k3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.85512441690895,0.024986072226511266
+unscaled_T1,qwen-4b,minimax-m3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8532545342127881,0.037270902250600556
+unscaled_T1,qwen-4b,mimo-v2.6-pro,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",49,0.8730718839919035,0.023520915098037352
+unscaled_T1,qwen-9b,human,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8095835221326658,0.04388678138138904
+unscaled_T1,qwen-9b,qwen-2b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",48,0.937941774207916,0.016779798147529383
+unscaled_T1,qwen-9b,qwen-4b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9808355800554499,0.00665671602500612
+unscaled_T1,qwen-9b,qwen-9b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,1.0,0.0
+unscaled_T1,qwen-9b,gemma-e2b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9076389277488874,0.020943255039188476
+unscaled_T1,qwen-9b,gemma-e4b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9140959363118937,0.019270933039718142
+unscaled_T1,qwen-9b,gemma-12b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9296922498599048,0.016621575128989183
+unscaled_T1,qwen-9b,llama-3.2-1b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9244924608581302,0.03879836762289087
+unscaled_T1,qwen-9b,llama-3.1-8b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.943046702317149,0.015781745859230062
+unscaled_T1,qwen-9b,mistral-7b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9318568348866094,0.015074284663816875
+unscaled_T1,qwen-9b,gpt-6-astra,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8130687968237699,0.031448717329474664
+unscaled_T1,qwen-9b,claude-opus-5.5,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8652694499034317,0.02158504022940209
+unscaled_T1,qwen-9b,gemini-4-argon,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8635718311366967,0.018691477848475385
+unscaled_T1,qwen-9b,qwen3.8-2.4t-a95b,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.9070974591936916,0.019390368098187363
+unscaled_T1,qwen-9b,deepseek-v4-pro-0813,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.892503565858418,0.02617389297704568
+unscaled_T1,qwen-9b,deepseek-v4.1-flash-1017,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.865951014405575,0.02876407045028109
+unscaled_T1,qwen-9b,glm-5.3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8714830738946121,0.022369165717977483
+unscaled_T1,qwen-9b,kimi-k3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8784628621102307,0.02290386635395705
+unscaled_T1,qwen-9b,minimax-m3,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",50,0.8727447894259093,0.025591469737194568
+unscaled_T1,qwen-9b,mimo-v2.6-pro,1.0,20,0.95,"shipped (k=20, p=0.95) at T=1.0",49,0.8868847721354755,0.024252989520710977
+unscaled_T1,gemma-e2b,human,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.4677263329225992,0.07753713354990317
+unscaled_T1,gemma-e2b,qwen-2b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",48,0.7183704487876791,0.04639901389096584
+unscaled_T1,gemma-e2b,qwen-4b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.742479970927494,0.03321787766697384
+unscaled_T1,gemma-e2b,qwen-9b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7435832727100249,0.02641633572999513
+unscaled_T1,gemma-e2b,gemma-e2b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,1.0,0.0
+unscaled_T1,gemma-e2b,gemma-e4b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.85641022516823,0.03405258438797232
+unscaled_T1,gemma-e2b,gemma-12b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7405825058209927,0.03219023006804323
+unscaled_T1,gemma-e2b,llama-3.2-1b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6508532458796101,0.0752067809777041
+unscaled_T1,gemma-e2b,llama-3.1-8b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7158851759097185,0.045489366766851565
+unscaled_T1,gemma-e2b,mistral-7b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6987696810177269,0.04237885045923851
+unscaled_T1,gemma-e2b,gpt-6-astra,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.5161939850318138,0.047691173501041774
+unscaled_T1,gemma-e2b,claude-opus-5.5,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.5840259452890848,0.04612081954313191
+unscaled_T1,gemma-e2b,gemini-4-argon,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6290163314996033,0.03162872062298173
+unscaled_T1,gemma-e2b,qwen3.8-2.4t-a95b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6526730462922774,0.037511575914239134
+unscaled_T1,gemma-e2b,deepseek-v4-pro-0813,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6288705509797337,0.049797362338963355
+unscaled_T1,gemma-e2b,deepseek-v4.1-flash-1017,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.5653466612332336,0.05142441273962892
+unscaled_T1,gemma-e2b,glm-5.3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.5924791229845922,0.03996005967613051
+unscaled_T1,gemma-e2b,kimi-k3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6076571337210646,0.04356336490955688
+unscaled_T1,gemma-e2b,minimax-m3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6036503056139436,0.06021185396814317
+unscaled_T1,gemma-e2b,mimo-v2.6-pro,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",49,0.6275983633266686,0.04568090102306224
+unscaled_T1,gemma-e4b,human,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6277153448495494,0.06422227577773448
+unscaled_T1,gemma-e4b,qwen-2b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",48,0.7988769682007398,0.03271536930616358
+unscaled_T1,gemma-e4b,qwen-4b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.8485358801999878,0.02615086743867954
+unscaled_T1,gemma-e4b,qwen-9b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.8518916423333128,0.019574856981011687
+unscaled_T1,gemma-e4b,gemma-e2b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.9266995422016012,0.020508875536897935
+unscaled_T1,gemma-e4b,gemma-e4b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,1.0,0.0
+unscaled_T1,gemma-e4b,gemma-12b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.862578325732145,0.023301065325836864
+unscaled_T1,gemma-e4b,llama-3.2-1b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7496914798659197,0.0657230547813777
+unscaled_T1,gemma-e4b,llama-3.1-8b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.808163623689095,0.03561576756930264
+unscaled_T1,gemma-e4b,mistral-7b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7874839098937164,0.03237314574872654
+unscaled_T1,gemma-e4b,gpt-6-astra,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6233892676824331,0.040121518366318075
+unscaled_T1,gemma-e4b,claude-opus-5.5,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7102654160566838,0.04065652472389107
+unscaled_T1,gemma-e4b,gemini-4-argon,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7450105429878602,0.0257312021627328
+unscaled_T1,gemma-e4b,qwen3.8-2.4t-a95b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7737433498234637,0.02444821045683228
+unscaled_T1,gemma-e4b,deepseek-v4-pro-0813,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7468891753624176,0.03800082987017627
+unscaled_T1,gemma-e4b,deepseek-v4.1-flash-1017,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6879627049528807,0.03774099008195653
+unscaled_T1,gemma-e4b,glm-5.3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7103358929238195,0.033703530666005586
+unscaled_T1,gemma-e4b,kimi-k3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7285041365293499,0.03632283453409282
+unscaled_T1,gemma-e4b,minimax-m3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7238582526037375,0.058576901149804086
+unscaled_T1,gemma-e4b,mimo-v2.6-pro,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",49,0.7475364107948997,0.03410802217216048
+unscaled_T1,gemma-12b,human,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7249753285023907,0.05514536329829922
+unscaled_T1,gemma-12b,qwen-2b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",48,0.7776876550353783,0.04702862802873309
+unscaled_T1,gemma-12b,qwen-4b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.795112655403037,0.023646509138156798
+unscaled_T1,gemma-12b,qwen-9b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.8007512451462078,0.02248623072891498
+unscaled_T1,gemma-12b,gemma-e2b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7763777843262205,0.026326488596622153
+unscaled_T1,gemma-12b,gemma-e4b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.788821134528314,0.03313737847686904
+unscaled_T1,gemma-12b,gemma-12b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,1.0,0.0
+unscaled_T1,gemma-12b,llama-3.2-1b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.8169446252957445,0.06420392117853264
+unscaled_T1,gemma-12b,llama-3.1-8b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.8435178852921312,0.023783749288297493
+unscaled_T1,gemma-12b,mistral-7b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.8184755276757661,0.034711895645645835
+unscaled_T1,gemma-12b,gpt-6-astra,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6047530652572752,0.04853191952078529
+unscaled_T1,gemma-12b,claude-opus-5.5,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6846142210460815,0.041172334680546166
+unscaled_T1,gemma-12b,gemini-4-argon,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.726450706746497,0.03134203846830094
+unscaled_T1,gemma-12b,qwen3.8-2.4t-a95b,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7424875289173086,0.03160247756492692
+unscaled_T1,gemma-12b,deepseek-v4-pro-0813,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.7132732767881967,0.042180488111171054
+unscaled_T1,gemma-12b,deepseek-v4.1-flash-1017,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6469936218849895,0.04769757077683534
+unscaled_T1,gemma-12b,glm-5.3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6828429072094621,0.03606758434698025
+unscaled_T1,gemma-12b,kimi-k3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6966327413414821,0.04275393093394916
+unscaled_T1,gemma-12b,minimax-m3,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",50,0.6838565132327465,0.04906322810369017
+unscaled_T1,gemma-12b,mimo-v2.6-pro,1.0,64,0.95,"shipped (k=64, p=0.95) at T=1.0",49,0.7108816502135614,0.032255656533300904
+unscaled_T1,llama-3.2-1b,human,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7765589827114711,0.0331343319678047
+unscaled_T1,llama-3.2-1b,qwen-2b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",48,0.8733679447936747,0.027824357801633264
+unscaled_T1,llama-3.2-1b,qwen-4b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8269068431678069,0.02926034691905311
+unscaled_T1,llama-3.2-1b,qwen-9b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8120511928666865,0.02083042853270277
+unscaled_T1,llama-3.2-1b,qwen-27b-int8,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.81130695932093,0.02403426338643852
+unscaled_T1,llama-3.2-1b,qwen-32b-int8,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8315058039320339,0.02729754065524984
+unscaled_T1,llama-3.2-1b,gemma-e2b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8175688878510874,0.0264037328439476
+unscaled_T1,llama-3.2-1b,gemma-e4b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.802491102630021,0.025603688584024814
+unscaled_T1,llama-3.2-1b,gemma-12b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.800149178358003,0.023038577573410386
+unscaled_T1,llama-3.2-1b,llama-3.2-1b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,1.0,0.0
+unscaled_T1,llama-3.2-1b,llama-3.1-8b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.9515142345463902,0.013469588517307778
+unscaled_T1,llama-3.2-1b,mistral-7b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8857602662959617,0.022800647064274072
+unscaled_T1,llama-3.2-1b,gpt-6-astra,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7265929000730802,0.025546014160682383
+unscaled_T1,llama-3.2-1b,claude-opus-5.5,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7561993316256084,0.02256525981717723
+unscaled_T1,llama-3.2-1b,gemini-4-argon,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7630982400482788,0.021010584607601388
+unscaled_T1,llama-3.2-1b,qwen3.8-2.4t-a95b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7711076605885272,0.025099288272975216
+unscaled_T1,llama-3.2-1b,deepseek-v4-pro-0813,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7708297623095995,0.027709804377107575
+unscaled_T1,llama-3.2-1b,deepseek-v4.1-flash-1017,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7480385368617771,0.027602054149910054
+unscaled_T1,llama-3.2-1b,glm-5.3,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7390198112768325,0.025741684247537148
+unscaled_T1,llama-3.2-1b,kimi-k3,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7458740775084342,0.02410961522094248
+unscaled_T1,llama-3.2-1b,minimax-m3,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7549679150509115,0.031659500541916484
+unscaled_T1,llama-3.2-1b,mimo-v2.6-pro,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",49,0.7572501021391195,0.03226014194314957
+unscaled_T1,llama-3.1-8b,human,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8294392145805163,0.027420235970907546
+unscaled_T1,llama-3.1-8b,qwen-2b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",48,0.8764417619646044,0.0222001027017067
+unscaled_T1,llama-3.1-8b,qwen-4b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8695907924780397,0.021414461068956454
+unscaled_T1,llama-3.1-8b,qwen-9b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8628575500537298,0.01608777797063221
+unscaled_T1,llama-3.1-8b,qwen-27b-int8,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8602459022928578,0.01551706487210634
+unscaled_T1,llama-3.1-8b,qwen-32b-int8,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8878418931294156,0.023961805098649914
+unscaled_T1,llama-3.1-8b,gemma-e2b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8528484243175449,0.02064139208970207
+unscaled_T1,llama-3.1-8b,gemma-e4b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8515719161338501,0.024989923622783444
+unscaled_T1,llama-3.1-8b,gemma-12b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8455846576644696,0.01771275833431985
+unscaled_T1,llama-3.1-8b,llama-3.2-1b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.9305901281333405,0.03823943373830402
+unscaled_T1,llama-3.1-8b,llama-3.1-8b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,1.0,0.0
+unscaled_T1,llama-3.1-8b,mistral-7b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.9204689644967194,0.018645671940080856
+unscaled_T1,llama-3.1-8b,gpt-6-astra,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.7877792135651402,0.023958789364003155
+unscaled_T1,llama-3.1-8b,claude-opus-5.5,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8220083233705311,0.01957268696973356
+unscaled_T1,llama-3.1-8b,gemini-4-argon,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8178601991439165,0.01834215982689622
+unscaled_T1,llama-3.1-8b,qwen3.8-2.4t-a95b,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8379299443994762,0.01978954363075495
+unscaled_T1,llama-3.1-8b,deepseek-v4-pro-0813,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8286488066359522,0.027675086449890758
+unscaled_T1,llama-3.1-8b,deepseek-v4.1-flash-1017,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8150884858700688,0.021141542344535986
+unscaled_T1,llama-3.1-8b,glm-5.3,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8145841767692934,0.01819072254519444
+unscaled_T1,llama-3.1-8b,kimi-k3,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8127017006200838,0.02079392067090933
+unscaled_T1,llama-3.1-8b,minimax-m3,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",50,0.8127259640571068,0.024300054276962194
+unscaled_T1,llama-3.1-8b,mimo-v2.6-pro,1.0,100,0.9,"shipped (k=100, p=0.90) at T=1.0",49,0.8160880054227381,0.02811816489560939
+unscaled_T1,mistral-7b,human,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.7409829189531478,0.045569261259448865
+unscaled_T1,mistral-7b,qwen-2b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",48,0.8817653857431189,0.02205522235321936
+unscaled_T1,mistral-7b,qwen-4b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8843543194288463,0.018252403896413055
+unscaled_T1,mistral-7b,qwen-9b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8822288580740671,0.016929906734493804
+unscaled_T1,mistral-7b,qwen-27b-int8,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8789204706799296,0.01847248798691699
+unscaled_T1,mistral-7b,qwen-32b-int8,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.9052087758476864,0.02377171696991258
+unscaled_T1,mistral-7b,gemma-e2b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8706515531173786,0.019289609844120238
+unscaled_T1,mistral-7b,gemma-e4b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8674187752186061,0.021801685375107717
+unscaled_T1,mistral-7b,gemma-12b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8639061450803269,0.019399887485818123
+unscaled_T1,mistral-7b,llama-3.2-1b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8877448698544009,0.09616683595359925
+unscaled_T1,mistral-7b,llama-3.1-8b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.9456108762691489,0.012655916911573936
+unscaled_T1,mistral-7b,mistral-7b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.9964928837664665,0.0005633068824053375
+unscaled_T1,mistral-7b,gpt-6-astra,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.7815131298002642,0.02797727800797453
+unscaled_T1,mistral-7b,claude-opus-5.5,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8309135283382924,0.019764048702361148
+unscaled_T1,mistral-7b,gemini-4-argon,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8282533943237259,0.018964278832084274
+unscaled_T1,mistral-7b,qwen3.8-2.4t-a95b,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8497109302516839,0.024500384036981696
+unscaled_T1,mistral-7b,deepseek-v4-pro-0813,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8376574737876973,0.022879333439106954
+unscaled_T1,mistral-7b,deepseek-v4.1-flash-1017,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8024399761017686,0.02498750711051789
+unscaled_T1,mistral-7b,glm-5.3,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8263497017244897,0.021953047198542516
+unscaled_T1,mistral-7b,kimi-k3,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8287039504089619,0.030389623922043744
+unscaled_T1,mistral-7b,minimax-m3,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",50,0.8244371269494327,0.03328850922117541
+unscaled_T1,mistral-7b,mimo-v2.6-pro,1.0,100,0.95,"fallback (k=100, p=0.95) at T=1.0",49,0.8365855907738214,0.027367995718010105

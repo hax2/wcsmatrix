@@ -35,9 +35,9 @@ def load_model(spec, hardware):
         raise RuntimeError("CUDA is required; install the gpu extra on the server")
     free, total = torch.cuda.mem_get_info(0)
     limit = min(float(hardware["vram_limit_gib"]), free / 2**30)
-    reserve = float(hardware["reserve_gib"])
+    estimate = spec["estimated_parameters_b"] * (1.02 if spec["precision"] == "int8" else 1.98) / 1.073741824
+    reserve = min(float(hardware["reserve_gib"]), max(1.0, limit - estimate - 0.2))
     weight_budget = limit - reserve
-    estimate = spec["estimated_parameters_b"] * (1.15 if spec["precision"] == "int8" else 2.05) / 1.073741824
     if weight_budget < estimate:
         raise RuntimeError(
             f"{spec['name']} estimated weights {estimate:.1f} GiB exceed {weight_budget:.1f} GiB budget"
@@ -57,7 +57,7 @@ def load_model(spec, hardware):
         revision=spec["revision"],
         dtype=torch.bfloat16,
         device_map="auto",
-        max_memory={0: f"{int(weight_budget)}GiB", "cpu": f"{hardware['cpu_memory_gib']}GiB"},
+        max_memory={0: f"{max(int(weight_budget), int(np.ceil(estimate) + 1))}GiB", "cpu": f"{hardware['cpu_memory_gib']}GiB"},
         attn_implementation=attn,
         trust_remote_code=False,
     )
@@ -190,9 +190,11 @@ def encode_text(tokenizer, prefix, text):
     boundary = len(prefix)
     for index, (a, b) in enumerate(offsets):
         if a < boundary < b:
-            raise ValueError(
-                "Tokenizer merged across prompt/answer boundary; choose a prefix ending in a special token"
-            )
+            if not (prefix + text)[boundary:b].isspace():
+                raise ValueError(
+                    "Tokenizer merged across prompt/answer boundary; choose a prefix ending in a special token"
+                )
+            continue
         if a >= boundary and b > a:
             if index == 0:
                 raise ValueError("First text token has no preceding context")
@@ -359,30 +361,34 @@ def rescore(config):
         if meta["audit_sha256"] != expected:
             raise ValueError("Inference identity changed; use a new experiment name and rerun audits")
         with np.load(path, allow_pickle=False) as arrays:
-            groups = word_groups(meta["text"], arrays["offsets"], config["scoring"]["word_policy"])
-            for mode in config["scoring"]["modes"]:
-                for p in config["scoring"]["top_p"]:
-                    value = coverage(
-                        arrays["top_probs"],
-                        arrays["target_top_index"],
-                        groups,
-                        p,
-                        mode,
-                        arrays["mass_before"],
-                    )
-                    rows.append(
-                        {
-                            k: meta[k]
-                            for k in ("prompt_id", "source", "family", "kind", "scorer", "scorer_family")
-                        }
-                        | {
-                            "mode": mode,
-                            "p": p,
-                            "word_policy": config["scoring"]["word_policy"],
-                            "audit_sha256": meta["audit_sha256"],
-                            **value,
-                        }
-                    )
+            top_probs = arrays["top_probs"]
+            target_top_index = arrays["target_top_index"]
+            mass_before = arrays["mass_before"]
+            offsets = arrays["offsets"].tolist()
+        groups = word_groups(meta["text"], offsets, config["scoring"]["word_policy"])
+        for mode in config["scoring"]["modes"]:
+            for p in config["scoring"]["top_p"]:
+                value = coverage(
+                    top_probs,
+                    target_top_index,
+                    groups,
+                    p,
+                    mode,
+                    mass_before,
+                )
+                rows.append(
+                    {
+                        k: meta[k]
+                        for k in ("prompt_id", "source", "family", "kind", "scorer", "scorer_family")
+                    }
+                    | {
+                        "mode": mode,
+                        "p": p,
+                        "word_policy": config["scoring"]["word_policy"],
+                        "audit_sha256": meta["audit_sha256"],
+                        **value,
+                    }
+                )
     write_jsonl(Path("results/scores") / (config["name"] + ".jsonl"), rows)
     print(f"Wrote {len(rows)} per-prompt scores")
 
