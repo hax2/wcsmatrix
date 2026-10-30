@@ -1,0 +1,93 @@
+[
+  {
+    "source": "gemma-12b",
+    "kind": "local",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 279.62,
+    "min_words": 240,
+    "max_words": 319,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "gemma-e2b",
+    "kind": "local",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 273.28,
+    "min_words": 228,
+    "max_words": 341,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "gemma-e4b",
+    "kind": "local",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 275.04,
+    "min_words": 236,
+    "max_words": 311,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "human",
+    "kind": "human",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 253.96,
+    "min_words": 153,
+    "max_words": 395,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "qwen-2b",
+    "kind": "local",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 332.56,
+    "min_words": 277,
+    "max_words": 415,
+    "outside_150_400": 3,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "qwen-4b",
+    "kind": "local",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 341.0,
+    "min_words": 293,
+    "max_words": 414,
+    "outside_150_400": 1,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "qwen-9b",
+    "kind": "local",
+    "answers": 50,
+    "complete_answers": 50,
+    "expected_answers": 50,
+    "mean_words": 372.04,
+    "min_words": 321,
+    "max_words": 411,
+    "outside_150_400": 5,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  }
+]

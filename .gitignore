@@ -17,3 +17,13 @@ results/manifests/
 *.safetensors
 *.bin
 *.log
+.ipynb_checkpoints/
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+overleaf/*.pdf
+overleaf/overleaf_project.zip

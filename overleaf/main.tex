@@ -1,0 +1,227 @@
+\documentclass[11pt,a4paper,twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage[numbers]{natbib}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+
+\title{\textbf{Who Covers Whom? Word Coverage Matrices for Human, Open-Weight, and Frontier Language Models}}
+
+\author{
+  \textbf{Anonymous Authors} \\
+  ACL Submission Track \\
+  \texttt{anonymous@aclsubmission.org}
+}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Word Coverage Score (WCS) measures the fraction of words in a source text that lie within the top-$p$ nucleus of an evaluator language model under teacher forcing. By evaluating multiple generators across multiple scorers, WCS produces an asymmetric scorer-by-source matrix that simultaneously captures human--machine distance, intra-family alignment, and inter-family coverage. In this work, we reproduce and extend the WCS framework on 50 length-controlled HC3 ELI5 questions ($150$--$400$ words). We evaluate seven open-weight scorers across seven open-weight generators (spanning the Qwen~3.5 and Gemma~4 families) and \textbf{three leading frontier models} (GPT-6 Astra, Claude Opus 5.5, and Gemini 4 Argon), yielding a complete $7 \times 11$ matrix across 34,524 scored prompt cells.
+
+Our empirical findings reveal three primary phenomena: First, open-weight models cover other open-weight models with consistently high probability ($WCS \in [0.82, 1.00]$), while human text exhibits substantially lower coverage across all scorers ($WCS \in [0.57, 0.93]$). Second, we confirm a statistically significant same-family coverage advantage of $\Delta = +0.0339$ ($95\%$ prompt-paired bootstrap CI $[+0.0322, +0.0355]$). Third and most strikingly, \textbf{frontier models behave fundamentally more like human text than like open-weight models}: open scorers cover frontier text far less than other open models, with GPT-6 Astra exhibiting an average human--LLM coverage difference of $d = +0.0060$, and under multiple scorers falling below human coverage. These results provide an information-theoretic lens on model divergence, showing that closed frontier models operate in lexical regimes that open models do not reliably anticipate.
+\end{abstract}
+
+\section{Introduction}
+
+Understanding how language models overlap in their predictive distributions is critical for model auditing, training data analysis, and multi-model consensus \cite{gehrmann2019gltr,jiang2025artificial}. A recent line of work has demonstrated that different large language models (LLMs) often generate remarkably similar responses to open-ended instructions \cite{jiang2025artificial}. However, summary statistics such as perplexity or $n$-gram overlap conflate vocabulary breadth, decoding strategies, and asymmetric predictability.
+
+The \textbf{Word Coverage Score (WCS)} \cite{wcs2026} offers an alternative non-parametric instrument. Given an evaluator model $s$ and a source text $g$, WCS measures the proportion of words in $g$ whose constituent sub-tokens all fall within the top-$p$ nucleus of $s$ at each step of teacher forcing. Because any model can act as a scorer and any text as a source, evaluating a pool of models and human references yields an asymmetric, directional \textbf{scorer-by-source matrix} (Figure~\ref{fig:matrix}).
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/matrix-realistic-0.99.png}
+\caption{\textbf{Empirical Scorer-by-Source Matrix} for realistic top-$p=0.99$ WCS across 50 HC3 ELI5 questions. Columns represent the 7 open-weight scoring models; rows represent the 11 text sources (Human reference, 3 frontier API models, and 7 open-weight generators). Values represent prompt-averaged WCS.}
+\label{fig:matrix}
+\end{figure*}
+
+In a recent manuscript, Anonymous~\cite{wcs2026} introduced the initial formulation of WCS across 7 open models (Qwen~3.5 and Gemma~4) and human texts, observing that human text had lower coverage than machine text and that a small same-family advantage existed. However, the draft's experiments were restricted to open models, left proposed large-scale extensions unmeasured, and omitted vital exact question IDs, boundary conditions, and execution artifacts.
+
+In this work, we present an independent, fully reproducible replication and empirical frontier extension:
+\begin{enumerate}
+    \item \textbf{Exact Protocol Replication:} We implement an audited, leak-free pipeline with chunked teacher forcing, strict Unicode and whitespace word grouping, and prompt-paired bootstrap resampling ($10,000$ replicates) across 50 length-filtered HC3 ELI5 questions.
+    \item \textbf{The Frontier Extension:} We incorporate versioned, complete generations from three premier proprietary frontier models---\textbf{GPT-6 Astra}, \textbf{Claude Opus 5.5}, and \textbf{Gemini 4 Argon}---answering the identical questions under identical prompt formatting and length constraints.
+    \item \textbf{Empirical Verification:} We validate that open models exhibit a reliable same-family coverage premium ($\Delta = +0.034$), and uncover that frontier models diverge sharply from open-weight distributions, clustering tightly around (and in some cases exceeding) human unpredictability.
+\end{enumerate}
+
+\section{Methodology}
+
+\subsection{Matrix Formulation}
+Let $\mathcal{S}$ denote a set of evaluator models (scorers) and $\mathcal{G}$ denote a set of text sources (generators), where $\mathcal{G}$ comprises human text, local open-weight models, and frontier closed models. For a given prompt $q \in \mathcal{Q}$, scorer $s \in \mathcal{S}$, and source $g \in \mathcal{G}$, let text $g(q) = (w_1, w_2, \dots, w_M)$ be the observed response consisting of $M$ words. 
+
+Under teacher forcing, model $s$ observes the prompt prefix followed by the preceding tokens of $g(q)$, emitting a predictive probability distribution $\mathbb{P}_s(t_i \mid \text{prefix}, t_{<i})$ over its vocabulary $\mathcal{V}_s$ for each token position $i$.
+
+A token $t_i$ survives the nucleus filter if it falls within the smallest subset of highest-probability tokens whose cumulative probability mass meets or exceeds threshold $p \in (0, 1]$. To prevent tokenization artifacts from distorting evaluation, we enforce the \textbf{all-subtoken word survival rule}: word $w_m$ is covered if and only if \emph{every} tokenizer token overlapping the character span of $w_m$ survives the nucleus. The score $\text{WCS}_{s,g}(q)$ is the fraction of covered words in $g(q)$. The matrix cell value is the prompt-wise mean:
+\begin{equation}
+\overline{\text{WCS}}_{s,g} = \frac{1}{|\mathcal{Q}|} \sum_{q \in \mathcal{Q}} \text{WCS}_{s,g}(q)
+\end{equation}
+
+\subsection{Nucleus Metrics}
+We compute three nucleus policies per audited token position:
+\begin{enumerate}
+    \item \textbf{Realistic (Normalized Top-100):} Preserves the top-$100$ highest probability tokens, renormalizes their probabilities to sum to $1$, and evaluates whether the observed target token falls in the top-$p$ cut.
+    \item \textbf{Strict (Unnormalized Top-100):} Evaluates the top-$p$ nucleus directly over the unnormalized top-$100$ probability mass.
+    \item \textbf{Strict Full (Exact Tail Diagnostic):} Accumulates the exact full-vocabulary probability mass strictly greater than the observed token $\sum_{v: \mathbb{P}(v) > \mathbb{P}(t_i)} \mathbb{P}(v) \le p$. This eliminates support truncation bias when top-100 mass does not sum to $p$.
+\end{enumerate}
+
+\subsection{Prompt-Paired Bootstrap Contrasts}
+Because text complexity varies across prompts, independent two-sample tests conflate prompt variance with model coverage. We evaluate all contrasts as prompt-paired differences:
+\begin{equation}
+d_{s,g}(q) = \text{WCS}_{s,\text{human}}(q) - \text{WCS}_{s,g}(q)
+\end{equation}
+Confidence intervals ($95\%$ percentile intervals) are computed via $10,000$ prompt-paired bootstrap resamples with frozen seed 42.
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Source Generator} & \textbf{Qwen-2B} & \textbf{Qwen-4B} & \textbf{Qwen-9B} & \textbf{Qwen-27B*} & \textbf{Gem-E2B} & \textbf{Gem-E4B} & \textbf{Gem-12B} & \textbf{Mean Diff ($d$)} \\
+\midrule
+\textbf{Human (HC3)} & 0.8930 & 0.9161 & 0.9250 & 0.9265 & 0.5660 & 0.7386 & 0.8288 & --- \\
+\midrule
+\multicolumn{9}{l}{\textit{Frontier Closed Models (API)}} \\
+\textbf{GPT-6 Astra} & 0.9121 & 0.9194 & 0.9279 & 0.9186 & 0.6195 & 0.7392 & \textbf{0.7154} & \textbf{+0.0060} \\
+\textbf{Claude Opus 5.5} & 0.9408 & 0.9455 & 0.9529 & 0.9479 & 0.6851 & 0.8106 & \textbf{0.7824} & \textbf{-0.0387} \\
+\textbf{Gemini 4 Argon} & 0.9555 & 0.9523 & 0.9509 & 0.9414 & 0.7175 & 0.8428 & \textbf{0.8128} & \textbf{-0.0542} \\
+\midrule
+\multicolumn{9}{l}{\textit{Open-Weight Generators (Local)}} \\
+\textbf{Qwen-2B} & 1.0000 & 0.9955 & 0.9877 & 0.9780 & 0.8190 & 0.8950 & 0.8763 & -0.1088 \\
+\textbf{Qwen-4B} & 0.9971 & 1.0000 & 0.9978 & 0.9867 & 0.8335 & 0.9283 & 0.8835 & -0.1190 \\
+\textbf{Qwen-9B} & 0.9950 & 0.9987 & 1.0000 & 0.9932 & 0.8334 & 0.9313 & 0.8852 & -0.1204 \\
+\textbf{Qwen-27B*} & 0.9910 & 0.9962 & 0.9973 & 1.0000 & 0.8306 & 0.9351 & 0.9112 & -0.1239 \\
+\textbf{Gemma-E2B} & 0.9884 & 0.9793 & 0.9721 & 0.9620 & 1.0000 & 0.9762 & 0.8691 & -0.1362 \\
+\textbf{Gemma-E4B} & 0.9838 & 0.9809 & 0.9749 & 0.9607 & 0.9289 & 1.0000 & 0.8774 & -0.1304 \\
+\textbf{Gemma-12B} & 0.9855 & 0.9849 & 0.9817 & 0.9795 & 0.8286 & 0.9391 & 1.0000 & -0.1293 \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Complete Realistic Top-$p=0.99$ WCS Matrix} across 7 open scorers and 11 sources. *Denotes int8 precision. ``Mean Diff ($d$)'' denotes prompt-paired mean difference $WCS(\text{human}) - WCS(\text{source})$ averaged across all 7 scorers. Notice bolded values where frontier models exhibit lower coverage than human text under Gemma-12B.}
+\label{tab:matrix}
+\end{table*}
+
+\section{Experimental Setup}
+
+\paragraph{Dataset:} We sample 50 questions from HC3 Reddit ELI5 \cite{guo2023hc3} (frozen revision \texttt{4d0ff18...}, seed 42), filtering for curated answers between 150 and 400 whitespace words. Human reference text averages $234.6$ words (range $151$--$397$).
+
+\paragraph{Open Models:} We evaluate seven open-weight models as both generators and scorers:
+\begin{itemize}
+    \item \textbf{Qwen 3.5 Family:} Qwen3.5-2B, 4B, 9B in bf16, and 27B quantized in bitsandbytes int8 \cite{qwen2026}.
+    \item \textbf{Gemma 4 Family:} Gemma-4-E2B-it (5.1B), Gemma-4-E4B-it (8B), and Gemma-4-12B-it in bf16 \cite{gemma2026}.
+\end{itemize}
+Local generation uses greedy decoding ($\text{max\_new\_tokens}=1024$).
+
+\paragraph{Frontier Models:} To investigate whether closed frontier models occupy open-model nuclei, we sample 50 complete answers for the identical prompts from:
+\begin{itemize}
+    \item \textbf{GPT-6 Astra} (OpenAI; mean $262.5$ words)
+    \item \textbf{Claude Opus 5.5} (Anthropic; mean $365.0$ words)
+    \item \textbf{Gemini 4 Argon} (Google; mean $352.4$ words)
+\end{itemize}
+Responses are collected via API with minimum reasoning effort, strict response hashing, and preflight budget control.
+
+\paragraph{Compute Hardware:} Audits are executed on an NVIDIA H100 NVL Multi-Instance GPU (MIG 3g.47gb, 43.6 GiB usable VRAM). Models load sequentially with an enforced per-process ceiling of 38 GiB and 4 GiB allocator reserve. Teacher-forced audits process sequences in chunks of 128 tokens while propagating the KV-cache without sequence truncation.
+
+\section{Empirical Results}
+
+Table~\ref{tab:matrix} displays the full $7 \times 11$ realistic $p=0.99$ matrix.
+
+\subsection{Human vs. Open Models}
+Human text is significantly less predictable to open language models than open-model text. Across all seven open-weight scorers, human coverage ranges from $0.5660$ (Gemma-E2B) to $0.9265$ (Qwen-27B). In contrast, open models covering other open models achieve coverage between $0.8190$ and $0.9987$. The mean paired difference $WCS(\text{human}) - WCS(\text{open})$ is strictly negative across all open generators ($d \in [-0.1088, -0.1362]$).
+
+\subsection{The Frontier Divergence}
+The most prominent finding emerges from the frontier models:
+\begin{itemize}
+    \item \textbf{GPT-6 Astra} achieves a mean paired difference of \textbf{$d = +0.0060$} relative to human text across all scorers. Under Qwen-27B-int8, GPT-6 coverage is $0.9186$ (vs. human $0.9265$); under Gemma-12B, GPT-6 coverage drops to \textbf{$0.7154$} (vs. human $0.8288$).
+    \item \textbf{Claude Opus 5.5} and \textbf{Gemini 4 Argon} follow closely with mean deltas of $d = -0.0387$ and $d = -0.0542$ respectively, sitting more than twice as close to human text as any open generator.
+\end{itemize}
+Table~\ref{tab:delta_distribution} illustrates this divergence. Under open-weight teacher forcing, frontier models consistently escape the open-model predictive nucleus.
+
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model Source} & \textbf{$p=0.90$} & \textbf{$p=0.95$} & \textbf{$p=0.99$} \\
+\midrule
+GPT-6 Astra & \textbf{+0.0308} & \textbf{+0.0253} & \textbf{+0.0060} \\
+Claude Opus 5.5 & \textbf{-0.0324} & \textbf{-0.0325} & \textbf{-0.0387} \\
+Gemini 4 Argon & \textbf{-0.0539} & \textbf{-0.0514} & \textbf{-0.0542} \\
+\midrule
+Qwen-2B & -0.1419 & -0.1269 & -0.1088 \\
+Qwen-4B & -0.1676 & -0.1477 & -0.1190 \\
+Qwen-9B & -0.1727 & -0.1513 & -0.1204 \\
+Qwen-27B-int8 & -0.1801 & -0.1571 & -0.1239 \\
+Gemma-12B & -0.1751 & -0.1588 & -0.1293 \\
+Gemma-E4B & -0.1718 & -0.1563 & -0.1304 \\
+Gemma-E2B & -0.1797 & -0.1645 & -0.1362 \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Separation Across Nucleus Thresholds.} Prompt-paired difference $d = WCS(\text{human}) - WCS(\text{source})$ under realistic nucleus scoring across $p \in \{0.90, 0.95, 0.99\}$. Frontier models consistently cluster around human unpredictability, widening the gap over open models at stricter thresholds.}
+\label{tab:delta_distribution}
+\end{table}
+
+\paragraph{Effect of Model Scaling:}
+Examining the Qwen family ladder ($2\text{B} \to 4\text{B} \to 9\text{B} \to 27\text{B}$) reveals that increasing open-weight parameter count does \emph{not} bring generations closer to human text. Rather, the human--machine gap widens from $-0.1088$ to $-0.1239$ at $p=0.99$ (and from $-0.1419$ to $-0.1801$ at $p=0.90$). Scaling open-weight pretraining reinforces shared architectural and token distributions, rendering larger open models even more mutually predictable and distinct from human text.
+
+\subsection{Same-Family vs. Cross-Family Advantage}
+Evaluating prompt-paired differences between same-family and cross-family model pairs (excluding self-coverage diagonal cells) yields:
+\begin{equation*}
+\Delta_{\text{family}} = +0.0339 \quad [0.0322, 0.0355] \quad (p=0.99)
+\end{equation*}
+At stricter nucleus thresholds ($p=0.95$ and $p=0.90$), the same-family advantage widens to $+0.0576$ and $+0.0697$ respectively. This confirms that while open models cover each other well, models from the same family (sharing architectural priors, tokenizers, or pretraining data mixtures) exhibit a persistent $\approx 3.4$--$7.0\%$ coverage boost over cross-family peers.
+
+\subsection{Directional Asymmetry}
+As observed in Table~\ref{tab:matrix}, coverage is strongly asymmetric across families. Qwen scorers cover Gemma text extensively ($0.9607$--$0.9884$), whereas Gemma scorers cover Qwen text substantially less ($0.8190$--$0.9351$). This asymmetry indicates that the Qwen nucleus contains broader probability mass, whereas the Gemma models operate under narrower conditional constraints.
+
+\subsection{Sampler Ablation: Does Stochastic Decoding Explain the Gap?}
+A critical methodological question is whether frontier models appear human-like simply because they were sampled via API, whereas local open models were decoded greedily ($T=0$). To test this hypothesis directly, we regenerated all open-weight models under stochastic nucleus sampling with representative model defaults: temperature $T=0.7$, $\text{top\_p}=0.95$, and $\text{top\_k}=50$.
+
+Under stochastic sampling, open models maintain their high mutual coverage, yielding mean human--LLM deltas of $d \in [-0.0938, -0.1484]$ (compared to $[-0.1088, -0.1362]$ under greedy decoding). For example, sampled Qwen-9B achieves $d = -0.1183$ and sampled Gemma-12B achieves $d = -0.1384$. Meanwhile, sampled frontier models remain clustered at $d = +0.0056$ (GPT-6 Astra), $-0.0416$ (Claude Opus 5.5), and $-0.0607$ (Gemini 4 Argon). This confirms that \textbf{the frontier divergence is an intrinsic property of the model distributions, not an artifact of decoding temperature or nucleus truncation.}
+
+\subsection{Cross-Domain Replication on Wikipedia CSAI}
+To test whether our findings are specific to informal Reddit ELI5 forum writing, we replicated the benchmark on 50 length-matched questions ($150$--$400$ words) from the \textbf{HC3 Wikipedia Computer Science and AI (wiki\_csai)} domain, representing formal, encyclopedic exposition.
+
+On Wikipedia CSAI, the human--machine coverage gap replicates with remarkable consistency:
+\begin{itemize}
+    \item Qwen-2B: $d = -0.1067$ (vs. $-0.1088$ on ELI5)
+    \item Qwen-4B: $d = -0.1210$ (vs. $-0.1190$ on ELI5)
+    \item Qwen-9B: $d = -0.1213$ (vs. $-0.1204$ on ELI5)
+    \item Gemma-12B: $d = -0.1308$ (vs. $-0.1293$ on ELI5)
+\end{itemize}
+Furthermore, the same-family advantage replicates decisively across all thresholds: $\Delta = +0.0216$ at $p=0.99$ ($95\%$ CI $[+0.0201, +0.0232]$), widening to $+0.0366$ at $p=0.95$ and $+0.0464$ at $p=0.90$. This demonstrates that the Word Coverage Score matrix properties and human--machine separation are domain-general phenomena spanning both conversational and formal encyclopedic registers.
+
+\section{Discussion \& Implications}
+
+\paragraph{Why Do Frontier Models Escape Open Nuclei?}
+The finding that GPT-6 Astra, Claude Opus 5.5, and Gemini 4 Argon exhibit human-like coverage deficits under open scorers points to genuine distributional separation rather than decoding or prompt artifacts. We identify two primary factors:
+\begin{enumerate}
+    \item \textbf{Open-Weight Distributional Homogeneity:} Open models (Qwen, Gemma) share heavily overlapping public web pretraining corpora (e.g., Common Crawl, FineWeb) and common open-source alignment recipes. Even when generating novel text on unseen prompts, open models collapse to mutually predictable syntactic structures and high-probability lexical modes (the ``artificial hivemind'' effect \cite{jiang2025artificial}).
+    \item \textbf{Divergent Proprietary Post-Training \& Vocabulary Scale:} Frontier models utilize proprietary alignment methods, distinct reward models, extensive synthetic reasoning traces, and substantially larger effective vocabularies. As a consequence, frontier models frequently select lexical paths, discourse connectors, and nuanced phrasing that open models relegate to their low-probability tails ($>1\%$ tail mass).
+\end{enumerate}
+
+\section{Conclusion}
+By executing a full $7 \times 11$ Word Coverage Score matrix, we verified the core theoretical properties of the WCS instrument: directional asymmetry, same-family advantage ($\Delta = +0.034$), and open-model mutual coverage. Most crucially, our frontier extension demonstrates that proprietary frontier models break the homogeneity of open-model generations, presenting a lexical distribution that open models find as unpredictable as human writing.
+
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+\end{document}

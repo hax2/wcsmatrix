@@ -11,9 +11,11 @@ from .io import digest, write_json, write_jsonl
 
 def prepare(config):
     spec = config["dataset"]
-    raw = Path(f"data/raw/hc3-eli5-{spec['revision']}.jsonl")
+    domain = spec.get("domain", "eli5")
+    filename = "reddit_eli5" if domain == "eli5" else domain
+    raw = Path(f"data/raw/hc3-{domain}-{spec['revision']}.jsonl")
     raw.parent.mkdir(parents=True, exist_ok=True)
-    url = f"https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/{spec['revision']}/reddit_eli5.jsonl"
+    url = f"https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/{spec['revision']}/{filename}.jsonl"
     if not raw.exists():
         response = httpx.get(url, follow_redirects=True, timeout=120)
         response.raise_for_status()
@@ -25,11 +27,11 @@ def prepare(config):
             if spec["min_words"] <= len(answer.split()) <= spec["max_words"]:
                 candidates.append(
                     {
-                        "id": "hc3-eli5-" + str(row.get("id", row_index)),
+                        "id": f"hc3-{domain}-" + str(row.get("id", row_index)),
                         "question": row["question"],
                         "human_text": answer,
                         "answer_index": i,
-                        "domain": "reddit_eli5",
+                        "domain": domain,
                         "dataset": "HC3",
                         "dataset_revision": spec["revision"],
                     }

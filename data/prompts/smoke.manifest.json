@@ -1,0 +1,15 @@
+{
+  "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/reddit_eli5.jsonl",
+  "raw_sha256": "448cebaf7fdf27560daf6cc87cc1464be4988cf8110c0ec40c40b21c2c0193db",
+  "selection": {
+    "n": 2,
+    "seed": 42,
+    "min_words": 150,
+    "max_words": 400,
+    "revision": "4d0ff18143b5a7e1b1e79beb540c04549d1e59d3"
+  },
+  "prompts_sha256": "11353a70d4d9fcfe78219f98c1ce1bd5209df78ba2d7f83214ab74fe4c0a9ada",
+  "eligible_questions": 8393,
+  "license": "CC-BY-SA-4.0; see HC3 dataset card",
+  "selection_note": "first length-eligible human answer per question; not original curated IDs"
+}

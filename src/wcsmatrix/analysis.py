@@ -235,10 +235,11 @@ def analyze(config, allow_partial=False):
     comparisons = []
     for cell in cells:
         if cell["source"] == "human" and cell["p"] == 0.99 and cell["mode"] in paper:
-            target = paper[cell["mode"]][cell["scorer"]]
-            comparisons.append(
-                {**cell, "paper_rounded_wcs": target, "difference_from_paper": cell["wcs"] - target}
-            )
+            target = paper[cell["mode"]].get(cell["scorer"])
+            if target is not None:
+                comparisons.append(
+                    {**cell, "paper_rounded_wcs": target, "difference_from_paper": cell["wcs"] - target}
+                )
     csv_file(directory / "paper-comparison.csv", comparisons)
     import matplotlib
 

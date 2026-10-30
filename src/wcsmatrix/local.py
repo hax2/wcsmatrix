@@ -43,23 +43,32 @@ def load_model(spec, hardware):
             f"{spec['name']} estimated weights {estimate:.1f} GiB exceed {weight_budget:.1f} GiB budget"
         )
     torch.cuda.set_per_process_memory_fraction(min(limit * 2**30 / total, 1.0), 0)
-    tokenizer = AutoTokenizer.from_pretrained(spec["id"], revision=spec["revision"], use_fast=True)
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(spec["id"], revision=spec["revision"], use_fast=True)
+    except Exception:
+        tokenizer = AutoTokenizer.from_pretrained(
+            spec["id"], revision=spec["revision"], use_fast=True, local_files_only=True
+        )
     if not tokenizer.is_fast:
         raise ValueError("Fast tokenizer with offsets is required")
     cls = AutoModelForMultimodalLM if spec.get("loader") == "multimodal" else AutoModelForCausalLM
+    attn = "eager" if spec.get("family") == "gemma" else "sdpa"
     kwargs = dict(
         revision=spec["revision"],
         dtype=torch.bfloat16,
         device_map="auto",
         max_memory={0: f"{int(weight_budget)}GiB", "cpu": f"{hardware['cpu_memory_gib']}GiB"},
-        attn_implementation="sdpa",
+        attn_implementation=attn,
         trust_remote_code=False,
     )
     if spec["precision"] == "int8":
         kwargs["quantization_config"] = BitsAndBytesConfig(load_in_8bit=True)
     elif spec["precision"] != "bf16":
         raise ValueError("Only paper precisions bf16 and int8 are supported")
-    model = cls.from_pretrained(spec["id"], **kwargs).eval()
+    try:
+        model = cls.from_pretrained(spec["id"], **kwargs).eval()
+    except Exception:
+        model = cls.from_pretrained(spec["id"], local_files_only=True, **kwargs).eval()
     if any(str(device) in {"cpu", "disk"} for device in getattr(model, "hf_device_map", {}).values()):
         raise RuntimeError("Model spilled to CPU/disk; increase budget or select smaller model")
     return model, tokenizer
@@ -405,7 +414,12 @@ def preflight(config):
     errors = []
     for spec in config["models"]:
         try:
-            cfg = AutoConfig.from_pretrained(spec["id"], revision=spec["revision"], trust_remote_code=False)
+            try:
+                cfg = AutoConfig.from_pretrained(spec["id"], revision=spec["revision"], trust_remote_code=False)
+            except Exception:
+                cfg = AutoConfig.from_pretrained(
+                    spec["id"], revision=spec["revision"], trust_remote_code=False, local_files_only=True
+                )
             info = {"name": spec["name"], "architecture": cfg.architectures, "model_type": cfg.model_type}
             # Config access verifies pinned revision and gated-repository authorization.
             response = httpx.get(

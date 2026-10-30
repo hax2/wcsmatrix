@@ -1,0 +1,3 @@
+source,kind,answers,complete_answers,expected_answers,mean_words,min_words,max_words,outside_150_400,reported_cost_usd
+human,human,2,2,2,305.5,247,364,0,0
+qwen-2b,local,2,2,2,297.0,229,365,0,0

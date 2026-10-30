@@ -1,0 +1,8 @@
+source,kind,answers,complete_answers,expected_answers,mean_words,min_words,max_words,outside_150_400,reported_cost_usd
+gemma-12b,local,50,50,50,279.62,240,319,0,0
+gemma-e2b,local,50,50,50,273.28,228,341,0,0
+gemma-e4b,local,50,50,50,275.04,236,311,0,0
+human,human,50,50,50,253.96,153,395,0,0
+qwen-2b,local,50,50,50,332.56,277,415,3,0
+qwen-4b,local,50,50,50,341.0,293,414,1,0
+qwen-9b,local,50,50,50,372.04,321,411,5,0

@@ -1,0 +1,28 @@
+[
+  {
+    "source": "human",
+    "kind": "human",
+    "answers": 2,
+    "complete_answers": 2,
+    "expected_answers": 2,
+    "mean_words": 305.5,
+    "min_words": 247,
+    "max_words": 364,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  },
+  {
+    "source": "qwen-2b",
+    "kind": "local",
+    "answers": 2,
+    "complete_answers": 2,
+    "expected_answers": 2,
+    "mean_words": 297.0,
+    "min_words": 229,
+    "max_words": 365,
+    "outside_150_400": 0,
+    "reported_cost_usd": 0,
+    "missing_prompt_ids": []
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/wiki_csai.jsonl",
+  "raw_sha256": "4f78105c72e7edd3b619b3b44abac1e6f8bdb42211f22e43191d4dae889e1968",
+  "selection": {
+    "n": 50,
+    "seed": 42,
+    "min_words": 150,
+    "max_words": 400,
+    "revision": "4d0ff18143b5a7e1b1e79beb540c04549d1e59d3",
+    "domain": "wiki_csai"
+  },
+  "prompts_sha256": "a9c244652c2d2ec0e92388955dee1612773e5f743d4ad4e1269b56d17bb06106",
+  "eligible_questions": 392,
+  "license": "CC-BY-SA-4.0; see HC3 dataset card",
+  "selection_note": "first length-eligible human answer per question; not original curated IDs"
+}
