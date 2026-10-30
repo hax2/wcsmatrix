@@ -15,6 +15,8 @@ ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 
 
 def collect(config, env_file=None, limit=None, workers=3, max_cost=20.0):
+    if not config.get("frontier_collection_enabled", True):
+        raise ValueError("This is an analysis-only combined config; collect using configs/open-frontier.yaml")
     if env_file:
         load_dotenv(env_file, override=False)
     else:
@@ -54,6 +56,10 @@ def collect(config, env_file=None, limit=None, workers=3, max_cost=20.0):
                 **params,
             }
             identity = digest({"payload": payload, "source": model["name"]})
+            if model.get("metadata"):
+                identity = digest(
+                    {"payload": payload, "source": model["name"], "metadata": model["metadata"]}
+                )
             old = done.get((prompt["id"], model["name"]))
             if old:
                 if old["request_sha256"] != identity:
@@ -73,7 +79,7 @@ def collect(config, env_file=None, limit=None, workers=3, max_cost=20.0):
             f"Estimated bound exceeds --max-cost-usd {max_cost}; use a smaller --limit or explicit larger cap"
         )
     write_json(
-        "results/manifests/frontier-catalog.json",
+        config.get("frontier_catalog_path", "results/manifests/frontier-catalog.json"),
         {"retrieved_at": now(), "models": [lookup[m["id"]] for m in models]},
     )
     errors = []
@@ -123,6 +129,8 @@ def collect(config, env_file=None, limit=None, workers=3, max_cost=20.0):
                     "complete": choice.get("finish_reason") == "stop",
                     "words": len(text.split()),
                 }
+                if model.get("metadata"):
+                    row["source_metadata"] = model["metadata"]
                 # Raw response may contain reasoning; kept local, not versioned.
                 write_json(f"results/raw/frontier/{model['name']}/{prompt['id']}.json", raw)
                 return row

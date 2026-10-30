@@ -7,7 +7,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .io import digest, read_jsonl, unique_rows, write_json
+from .io import digest, evaluation_prompts, read_jsonl, unique_rows, write_json
 from .local import source_texts
 from .metrics import paired_bootstrap
 
@@ -69,7 +69,7 @@ def analyze(config, allow_partial=False):
     if not scores:
         print(f"Collection report: {directory}; WCS not yet measured (run server audits)")
         return
-    prompts = {p["id"] for p in read_jsonl(config["prompts"])}
+    prompts = {p["id"] for p in evaluation_prompts(config)}
     sources = (
         ["human"] + [m["name"] for m in config["models"]] + [m["name"] for m in config["frontier_models"]]
     )
@@ -97,7 +97,12 @@ def analyze(config, allow_partial=False):
         if set(grouped[(s, g, mode, p)]) != prompts
     ]
     write_json(
-        directory / "completeness.json", {"expected_prompts": len(prompts), "incomplete_cells": missing}
+        directory / "completeness.json",
+        {
+            "expected_prompts": len(prompts),
+            "incomplete_cells": missing,
+            "evaluation_exclusions": config.get("evaluation_exclusions", {}),
+        },
     )
     if missing and not allow_partial:
         raise ValueError(
@@ -145,6 +150,35 @@ def analyze(config, allow_partial=False):
                 )
     csv_file(directory / "matrix.csv", cells)
     csv_file(directory / "human-minus-source.csv", contrasts)
+    group_contrasts = []
+    for contrast in config.get("source_group_contrasts", []):
+        a_sources, b_sources = contrast["sources_a"], contrast["sources_b"]
+        if not a_sources or not b_sources or set(a_sources + b_sources) - set(sources):
+            raise ValueError("Source group contrasts must reference configured non-empty source groups")
+        for scorer in scorers:
+            for mode in config["scoring"]["modes"]:
+                for p in config["scoring"]["top_p"]:
+                    a_values = [grouped[(scorer, source, mode, p)] for source in a_sources]
+                    b_values = [grouped[(scorer, source, mode, p)] for source in b_sources]
+                    ids = sorted(set.intersection(*(set(v) for v in a_values + b_values)))
+                    if not ids:
+                        continue
+                    a = [float(np.mean([v[i] for v in a_values])) for i in ids]
+                    b = [float(np.mean([v[i] for v in b_values])) for i in ids]
+                    group_contrasts.append(
+                        {
+                            "contrast": contrast["name"],
+                            "scorer": scorer,
+                            "mode": mode,
+                            "p": p,
+                            "sources_a": len(a_sources),
+                            "sources_b": len(b_sources),
+                            "mean_a": float(np.mean(a)),
+                            "mean_b": float(np.mean(b)),
+                            **paired_bootstrap(a, b, seed, reps),
+                        }
+                    )
+    csv_file(directory / "source-group-contrasts.csv", group_contrasts)
     # Equal weight to directional cells, then paired resampling of prompt-level means.
     family_contrasts = []
     for mode in config["scoring"]["modes"]:
@@ -247,6 +281,7 @@ def analyze(config, allow_partial=False):
             "config_sha256": digest(config),
             "score_rows": len(scores),
             "partial": bool(missing),
+            "evaluation_exclusions": config.get("evaluation_exclusions", {}),
             "bootstrap_replicates": reps,
             "seed": seed,
             "intervals": "pointwise paired percentile bootstrap; no multiplicity correction",

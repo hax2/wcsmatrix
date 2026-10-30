@@ -24,6 +24,15 @@ def read_jsonl(path):
     return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
 
 
+def evaluation_prompts(config):
+    rows = read_jsonl(config["prompts"])
+    excluded = config.get("evaluation_exclusions", {})
+    unknown = set(excluded) - {r["id"] for r in rows}
+    if unknown:
+        raise ValueError(f"Evaluation exclusions reference unknown prompts: {sorted(unknown)}")
+    return [r for r in rows if r["id"] not in excluded]
+
+
 def write_json(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)

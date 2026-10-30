@@ -110,3 +110,50 @@ def test_offline_rescore_allows_threshold_change_but_rejects_inference_drift(tmp
     scoring["context_mode"] = "plain"
     with pytest.raises(ValueError, match="identity changed"):
         rescore(cfg)
+
+
+def test_additional_source_files_are_combined_without_relabeling(tmp_path, monkeypatch):
+    from wcsmatrix.local import source_texts
+
+    monkeypatch.chdir(tmp_path)
+    config = {
+        "human_texts": "human.jsonl",
+        "local_texts": "local.jsonl",
+        "frontier_texts": "closed.jsonl",
+        "additional_texts": ["open.jsonl"],
+    }
+    write_jsonl("human.jsonl", [{"prompt_id": "q", "source": "human", "kind": "human"}])
+    write_jsonl("closed.jsonl", [{"prompt_id": "q", "source": "closed", "kind": "frontier"}])
+    write_jsonl(
+        "open.jsonl",
+        [
+            {
+                "prompt_id": "q",
+                "source": "open",
+                "kind": "frontier",
+                "source_metadata": {"weights_access": "open_weights"},
+            }
+        ],
+    )
+    rows = source_texts(config)
+    assert len(rows) == 3
+    assert rows[-1]["kind"] == "frontier"
+    assert rows[-1]["source_metadata"]["weights_access"] == "open_weights"
+    config["additional_texts"].append("closed.jsonl")
+    with pytest.raises(ValueError, match="Duplicate row"):
+        source_texts(config)
+
+
+def test_evaluation_exclusions_are_explicit_and_do_not_change_frozen_data(tmp_path, monkeypatch):
+    from wcsmatrix.io import evaluation_prompts
+
+    monkeypatch.chdir(tmp_path)
+    path = Path("prompts.jsonl")
+    write_jsonl(path, [{"id": "q1"}, {"id": "q2"}, {"id": "q3"}])
+    original = path.read_bytes()
+    config = {"prompts": str(path), "evaluation_exclusions": {"q2": "provider content filter"}}
+    assert [r["id"] for r in evaluation_prompts(config)] == ["q1", "q3"]
+    assert path.read_bytes() == original
+    config["evaluation_exclusions"]["unknown"] = "typo"
+    with pytest.raises(ValueError, match="unknown prompts"):
+        evaluation_prompts(config)

@@ -1,0 +1,17 @@
+{
+  "collected_answers": 350,
+  "complete_answers": 349,
+  "expected_per_source": 50,
+  "incomplete": [
+    {
+      "source": "mimo-v2.6-pro",
+      "prompt_id": "hc3-eli5-16977",
+      "finish_reason": "content_filter"
+    }
+  ],
+  "paired_complete_case_prompts": 49,
+  "reported_cost_usd": 0.6457302469,
+  "all_prompt_text_request_metadata_hashes_valid": true,
+  "frozen_prompt_manifest_sha256": "54251ef9e85f09106a4cdc01dd17703dff4f0c29555812b67c9e9196043c1218",
+  "text_file_sha256": "c6ebd8850d950ebb46e82de295d2d66d1ad50e14fd88c751aa3ebd02f9bc3431"
+}

@@ -1,8 +1,28 @@
-# Status — 2026-10-27
+# Status — 2026-10-30
 
 The public repository is https://github.com/hax2/wcsmatrix.
 
-## Collected
+## Open-weight extension collected 2026-10-30
+
+Added **350 hosted answers from seven open-weight models** on the same 50 frozen questions. **349 completed normally**; MiMo returned one `content_filter` response. Total API-reported cost: **$0.645730**. The filtered response is retained, marked incomplete, and excluded from WCS.
+
+| Source | Complete / collected | Mean words (all collected) | Reported cost (USD) |
+| --- | ---: | ---: | ---: |
+| deepseek-v4-pro-0813 | 50 / 50 | 246.72 | 0.047402 |
+| deepseek-v4.1-flash-1017 | 50 / 50 | 249.98 | 0.016664 |
+| glm-5.3 | 50 / 50 | 366.16 | 0.065570 |
+| kimi-k3 | 50 / 50 | 351.44 | 0.247392 |
+| mimo-v2.6-pro | 49 / 50 | 301.36 | 0.020355 |
+| minimax-m3 | 50 / 50 | 296.64 | 0.070938 |
+| qwen3.8-2.4t-a95b | 50 / 50 | 325.20 | 0.177410 |
+
+Use `configs/comparison-open-frontier-complete-cases.yaml` for a **49-prompt, 18-source × 7-scorer paired comparison**. It explicitly excludes `hc3-eli5-16977` from every source; this is a post-collection complete-case sensitivity analysis, not the original 50-prompt reproduction. `configs/comparison-open-frontier.yaml` preserves the full 50-prompt target and will flag the missing MiMo cell unless partial analysis is requested.
+
+Weight references, commits, and licenses are in [the model manifest](open-frontier-models-20261030.json); the protocol and server commands are in [open-frontier.md](open-frontier.md). Actual giant weights were not downloaded: these are hosted source rows scored by the existing H100-feasible checkpoints. No new GPU WCS scores are claimed.
+
+Validation: all 350 prompt/text/request/provenance identities passed; zero-new-request collection resumption passed. Lint and **20 tests** passed, including the optional torch architecture tests. The original baseline config, prompts, human answers, and 150 closed-frontier answers are unchanged.
+
+## Original collection
 
 50 frozen HC3 ELI5 questions and selected human answers, plus 150 complete frontier-generated answers:
 

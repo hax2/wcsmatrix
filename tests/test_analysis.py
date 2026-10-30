@@ -20,6 +20,9 @@ def test_complete_matrix_prompt_pairing_and_paper_comparison(tmp_path, monkeypat
         "frontier_models": [],
         "scoring": {"modes": ["realistic"], "top_p": [0.99]},
         "analysis": {"seed": 42, "bootstrap_replicates": 100},
+        "source_group_contrasts": [
+            {"name": "local_minus_human", "sources_a": ["a", "b"], "sources_b": ["human"]}
+        ],
     }
     write_jsonl("prompts.jsonl", [{"id": "p1"}, {"id": "p2"}])
     write_json("docs/paper-targets.json", {"realistic": {"a": 0.5, "b": 0.5}})
@@ -47,6 +50,11 @@ def test_complete_matrix_prompt_pairing_and_paper_comparison(tmp_path, monkeypat
     assert len(contrasts) == 4
     assert all(float(r["delta"]) == pytest.approx(-0.4) for r in contrasts)
     assert all(float(r["ci_low"]) == pytest.approx(-0.4) for r in contrasts)
+    groups = list(csv.DictReader((output / "source-group-contrasts.csv").open()))
+    assert len(groups) == 2
+    assert all(float(r["delta"]) == pytest.approx(0.4) for r in groups)
+    assert all(float(r["ci_low"]) == pytest.approx(0.4) for r in groups)
+    assert all(int(r["n"]) == 2 and int(r["sources_a"]) == 2 for r in groups)
     assert len(list(output.glob("matrix-*.png"))) == 1
     assert json.loads((output / "analysis-manifest.json").read_text())["partial"] is False
     write_jsonl("results/scores/test.jsonl", scores[:-1])

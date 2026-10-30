@@ -7,3 +7,5 @@ Human questions and answers are from **HC3**, Biyang Guo et al. (2023), “How C
 `texts/frontier.jsonl` contains API model outputs on these questions, labeled `kind: frontier`, with request/response provenance, response IDs, timing, usage, and completion status. It contains no API secrets. Model API aliases may change; a pinned request does not guarantee a bit-identical future response.
 
 `texts/local.jsonl` is created on the GPU server and can be committed or transferred back for analysis. Large token arrays and raw responses remain ignored. Do not commit `.env` files, account credentials, or downloaded model weights.
+
+`texts/open-frontier-20261030.jsonl` is the separate hosted open-weight cohort. Each row records explicit sampling/reasoning requests, provider/model identity, and reference weight repository/commit/license metadata. Reference commits do not certify the hosted provider's exact weight revision. The original closed-frontier file is preserved; the combined experiment reads both files. See [the open-frontier protocol](../docs/open-frontier.md).

@@ -7,7 +7,16 @@ from pathlib import Path
 
 import numpy as np
 
-from .io import append_jsonl, digest, now, read_jsonl, unique_rows, write_json, write_jsonl
+from .io import (
+    append_jsonl,
+    digest,
+    evaluation_prompts,
+    now,
+    read_jsonl,
+    unique_rows,
+    write_json,
+    write_jsonl,
+)
 from .metrics import coverage, word_groups
 
 
@@ -158,6 +167,8 @@ def source_texts(config):
     rows = []
     for field in ("human_texts", "local_texts", "frontier_texts"):
         rows.extend(read_jsonl(config[field]))
+    for path in config.get("additional_texts", []):
+        rows.extend(read_jsonl(path))
     unique_rows(rows, ("prompt_id", "source"))
     return rows
 
@@ -244,8 +255,12 @@ def token_audit(model, tokenizer, prompt, text, spec, scoring):
 def audit(config, name=None, limit=None):
     import torch
 
-    prompts = {r["id"]: r for r in read_jsonl(config["prompts"])}
+    prompts = {r["id"]: r for r in evaluation_prompts(config)}
     texts = source_texts(config)
+    known_ids = {r["id"] for r in read_jsonl(config["prompts"])}
+    if {r["prompt_id"] for r in texts} - known_ids:
+        raise ValueError("Source texts contain prompts outside the frozen manifest")
+    texts = [r for r in texts if r["prompt_id"] in prompts]
     if not texts:
         raise ValueError("No source texts; run prepare/generate/frontier first")
     if limit is not None:
@@ -314,7 +329,7 @@ def rescore(config):
 
     rows = []
     specs = {m["name"]: m for m in config["models"]}
-    prompts = {p["id"]: p for p in read_jsonl(config["prompts"])}
+    prompts = {p["id"]: p for p in evaluation_prompts(config)}
     texts = {(r["prompt_id"], r["source"]): r for r in source_texts(config)}
     scoring_settings = {
         k: v for k, v in config["scoring"].items() if k not in {"modes", "top_p", "word_policy"}

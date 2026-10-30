@@ -2,9 +2,13 @@
 
 Recreate the scorer-by-source Word Coverage Score (WCS) matrix in the supplied ACL draft and test whether frontier-generated answers sit closer to human or open-model text under the same open-model scorers.
 
-**Current scope:** 50 fixed HC3 ELI5 questions; human text, seven open-model sources, and three frontier sources; seven open-model scorers. Frontier models contribute source rows, while human remains its own row. API access does not provide the teacher-forced distributions needed for frontier scorer columns.
+**Baseline scope:** 50 fixed HC3 ELI5 questions; human text, seven open-model sources, and three frontier sources; seven open-model scorers. Frontier models contribute source rows, while human remains its own row. API access does not provide the teacher-forced distributions needed for frontier scorer columns.
 
 The paper's exact curated question IDs, prompts, tokenizer conventions, and inference configuration are unavailable. This is a documented independent reproduction, with rounded targets transcribed from Tables 1 and 4. See [methodology](docs/methodology.md) for the choices that can affect agreement.
+
+## Open-weight frontier extension
+
+Seven additional large open-weight models are configured in [the open-frontier extension](docs/open-frontier.md). Their answers use the same frozen questions and explicit sampler settings. Use `configs/open-frontier.yaml` for collection and `configs/comparison-open-frontier-complete-cases.yaml` for the combined 18-source × 7-scorer matrix on 49 matched prompts. One MiMo content-filter response is retained in the full 50-question collection; `configs/comparison-open-frontier.yaml` preserves that full target for explicitly partial analysis. The original baseline config and frontier texts remain unchanged.
 
 ## Local setup and frontier collection
 

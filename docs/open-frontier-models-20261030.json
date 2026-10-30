@@ -1,0 +1,72 @@
+[
+  {
+    "id": "qwen/qwen3.8-2.4t-a95b",
+    "weights_repo": "Qwen/Qwen3.8-2.4T-A95B",
+    "weights_revision": "207bd685a7e3696cfaff12ded7c6a7ea0f88c996",
+    "weights_license": "other",
+    "total_parameters": 2446182725504,
+    "weight_files": 213,
+    "gated": false,
+    "license_name": "qwen3.8-max"
+  },
+  {
+    "id": "deepseek/deepseek-v4-pro-0813",
+    "weights_repo": "deepseek-ai/DeepSeek-V4-Pro-0813",
+    "weights_revision": "72e1d3230f6c080a530b0a1d46f8eb4602340597",
+    "weights_license": "mit",
+    "total_parameters": 1650497936906,
+    "weight_files": 66,
+    "gated": false,
+    "license_name": "mit"
+  },
+  {
+    "id": "deepseek/deepseek-v4.1-flash-1017",
+    "weights_repo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "weights_revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
+    "weights_license": "mit",
+    "total_parameters": 763205315794,
+    "weight_files": 48,
+    "gated": false,
+    "license_name": "mit"
+  },
+  {
+    "id": "z-ai/glm-5.3",
+    "weights_repo": "zai-org/GLM-5.3",
+    "weights_revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844",
+    "weights_license": "other",
+    "total_parameters": 753329940480,
+    "weight_files": 141,
+    "gated": false,
+    "license_name": "glm-5.3"
+  },
+  {
+    "id": "moonshotai/kimi-k3",
+    "weights_repo": "moonshotai/Kimi-K3",
+    "weights_revision": "f831ab66814297da540d832a5235f8e904f29d06",
+    "weights_license": "other",
+    "total_parameters": 2779931837184,
+    "weight_files": 96,
+    "gated": false,
+    "license_name": "kimi-k3"
+  },
+  {
+    "id": "minimax/minimax-m3",
+    "weights_repo": "MiniMaxAI/MiniMax-M3",
+    "weights_revision": "d95e30cb912fe3021bb9c2ba66a8ce60b6c937a9",
+    "weights_license": "other",
+    "total_parameters": 427040140160,
+    "weight_files": 59,
+    "gated": false,
+    "license_name": "minimax-community"
+  },
+  {
+    "id": "xiaomi/mimo-v2.6-pro",
+    "weights_repo": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "weights_revision": "a066ba0057192126bd5d255f37138265fc1a435e",
+    "weights_license": "mit",
+    "total_parameters": 1024216603392,
+    "weight_files": 132,
+    "gated": false,
+    "license_name": "mit"
+  }
+]
