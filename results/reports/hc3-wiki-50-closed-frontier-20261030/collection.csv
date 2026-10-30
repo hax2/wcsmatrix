@@ -1,0 +1,11 @@
+source,kind,answers,complete_answers,expected_answers,mean_words,min_words,max_words,outside_150_400,reported_cost_usd
+claude-opus-5.5,frontier,50,50,50,365.52,317,412,1,0.844956
+gemini-4-argon,frontier,50,50,50,353.22,323,382,0,0.238752
+gemma-12b,local,50,50,50,279.62,240,319,0,0
+gemma-e2b,local,50,50,50,273.28,228,341,0,0
+gemma-e4b,local,50,50,50,275.04,236,311,0,0
+gpt-6-astra,frontier,50,50,50,257.96,232,286,0,0.87633
+human,human,50,50,50,253.96,153,395,0,0
+qwen-2b,local,50,50,50,332.56,277,415,3,0
+qwen-4b,local,50,50,50,341.0,293,414,1,0
+qwen-9b,local,50,50,50,372.04,321,411,5,0

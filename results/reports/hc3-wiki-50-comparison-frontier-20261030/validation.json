@@ -1,0 +1,28 @@
+{
+  "dataset": "HC3 wiki_csai",
+  "prompts": 50,
+  "prompt_manifest_sha256": "a9c244652c2d2ec0e92388955dee1612773e5f743d4ad4e1269b56d17bb06106",
+  "answers": 500,
+  "complete_answers": 500,
+  "cohorts": [
+    {
+      "cohort": "closed",
+      "answers": 150,
+      "complete_answers": 150,
+      "reported_cost_usd": 1.960038,
+      "texts_sha256": "2ff102fc7c98a02fa3cc5d8add577651045e2f1d4d8d3b077f5b0d6f8b9a04e4"
+    },
+    {
+      "cohort": "open",
+      "answers": 350,
+      "complete_answers": 350,
+      "reported_cost_usd": 0.53999334562,
+      "texts_sha256": "5001d5ad669dcdec2f5ae8cfb31361761fe28c4496694b61bef4525b0290dd52"
+    }
+  ],
+  "all_request_text_prompt_provenance_checks_passed": true,
+  "excluded_prompt_ids": [],
+  "reported_total_cost_usd": 2.50003134562,
+  "visible_reasoning_marker_count": 0,
+  "gpu_frontier_wcs_scoring": "pending; existing local-only Wiki reports are preserved"
+}

@@ -2,6 +2,16 @@
 
 The public repository is https://github.com/hax2/wcsmatrix.
 
+## Wiki frontier collection completed 2026-10-30
+
+Pulled commit `18cceaf`, including the frozen **50-question HC3 Wiki CS/AI** domain and its complete local-only six-scorer matrix. Added **500 complete frontier answers**: 150 from the three closed models and 350 from the seven open-weight models. No filtered/truncated responses and no question exclusions.
+
+API-reported cost: **$2.500031**. All request/text/prompt/provenance hashes passed, and the 300 existing Wiki local generations are reusable. The baseline Wiki config, prompts, human/local texts, and existing reports are unchanged.
+
+Server command: `bash scripts/run_server.sh configs/wiki-comparison-frontier.yaml` after pulling. This targets **50 prompts × 17 sources × 6 scorers**. The new frontier WCS scores are not yet computed; current new reports contain collection statistics and integrity checks. See [the Wiki protocol](wiki-frontier.md).
+
+Validation: lint and 20 tests passed, including the optional torch tests. Generation settings match the original ELI5 cohorts; keys and raw reasoning responses remain outside Git.
+
 ## Open-weight extension collected 2026-10-30
 
 Added **350 hosted answers from seven open-weight models** on the same 50 frozen questions. **349 completed normally**; MiMo returned one `content_filter` response. Total API-reported cost: **$0.645730**. The filtered response is retained, marked incomplete, and excluded from WCS.

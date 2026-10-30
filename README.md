@@ -10,6 +10,10 @@ The paper's exact curated question IDs, prompts, tokenizer conventions, and infe
 
 Seven additional large open-weight models are configured in [the open-frontier extension](docs/open-frontier.md). Their answers use the same frozen questions and explicit sampler settings. Use `configs/open-frontier.yaml` for collection and `configs/comparison-open-frontier-complete-cases.yaml` for the combined 18-source × 7-scorer matrix on 49 matched prompts. One MiMo content-filter response is retained in the full 50-question collection; `configs/comparison-open-frontier.yaml` preserves that full target for explicitly partial analysis. The original baseline config and frontier texts remain unchanged.
 
+## Wiki CS/AI frontier extension
+
+The newly pulled Wiki CS/AI dataset has its own [frontier extension](docs/wiki-frontier.md), using the same three closed and seven open frontier models on its frozen 50 questions. Use `configs/wiki-comparison-frontier.yaml` on the server to compare them against the six existing local models. The original Wiki and ELI5 experiments remain separate.
+
 ## Local setup and frontier collection
 
 ```bash

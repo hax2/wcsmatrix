@@ -9,3 +9,5 @@ Human questions and answers are from **HC3**, Biyang Guo et al. (2023), “How C
 `texts/local.jsonl` is created on the GPU server and can be committed or transferred back for analysis. Large token arrays and raw responses remain ignored. Do not commit `.env` files, account credentials, or downloaded model weights.
 
 `texts/open-frontier-20261030.jsonl` is the separate hosted open-weight cohort. Each row records explicit sampling/reasoning requests, provider/model identity, and reference weight repository/commit/license metadata. Reference commits do not certify the hosted provider's exact weight revision. The original closed-frontier file is preserved; the combined experiment reads both files. See [the open-frontier protocol](../docs/open-frontier.md).
+
+The Wiki CS/AI frontier files (`texts/wiki-closed-frontier-20261030.jsonl` and `texts/wiki-open-frontier-20261030.jsonl`) answer the frozen questions in `prompts/wiki-50.jsonl`, using the same cohort-specific generation requests as their ELI5 counterparts. The pre-existing Wiki human/local source files and manifest are preserved. See [the Wiki protocol](../docs/wiki-frontier.md).
