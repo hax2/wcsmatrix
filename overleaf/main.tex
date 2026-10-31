@@ -341,7 +341,7 @@ To measure this mechanism directly, we ran a dedicated GPU validation auditing \
 \centering
 \includegraphics[width=0.49\textwidth]{figures/matrix-expanded-realistic-0.99.png}\hfill
 \includegraphics[width=0.49\textwidth]{figures/matrix-wiki-realistic-0.99.png}
-\caption{\textbf{Cross-Family and Cross-Domain Generalization of the Reachability Matrix} (realistic top-$p=0.99$). \emph{Left:} 4-family expanded scorer pool (Qwen~3.5, Gemma~4, Llama~3.1/3.2, Mistral~7B; 9 bf16 scorers) on HC3 ELI5. \emph{Right:} Second-domain replication across all 16 sources on HC3 Wikipedia CS/AI (50 prompts).}
+\caption{\textbf{Cross-Family and Cross-Domain Generalization of the Reachability Matrix} (realistic top-$p=0.99$). \emph{Left:} 4-family expanded scorer pool (Qwen~3.5, Gemma~4, Llama~3.1/3.2, Mistral~7B; 11 scorers including Qwen-27B/32B int8) on HC3 ELI5. \emph{Right:} Second-domain replication across all 16 sources on HC3 Wikipedia CS/AI (50 prompts).}
 \label{fig:generalization}
 \end{figure*}
 
@@ -349,7 +349,7 @@ To measure this mechanism directly, we ran a dedicated GPU validation auditing \
 \label{sec:expanded_scorers}
 
 \paragraph{Four-Family Scorer Generalization (Qwen, Gemma, Llama, Mistral):}
-To verify that our findings are not an artifact of Qwen~3.5 and Gemma~4's 256k-token vocabularies or training pipelines, we audited all 18 ELI5 sources (plus Llama-3.2-1B, Llama-3.1-8B, and Mistral-7B as sources) across \textbf{9 bf16 scorers spanning 4 families} (adding Llama-3.2-1B-Instruct, Llama-3.1-8B-Instruct, and Mistral-7B-Instruct-v0.3).
+To verify that our findings are not an artifact of Qwen~3.5 and Gemma~4's 256k-token vocabularies or training pipelines, we audited all 18 ELI5 sources (plus Llama-3.2-1B, Llama-3.1-8B, and Mistral-7B as sources) across \textbf{11 scorers spanning 4 families} (adding Llama-3.2-1B-Instruct, Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3, and Qwen-27B/32B int8).
 As shown in Table~\ref{tab:tier_contrasts} (\textbf{ELI5 4-Family}), the three-tier hierarchy holds across all 9 scorers:
 \begin{itemize}
     \item Under \texttt{realistic} $p=0.99$: $\text{Human} = 0.8357$, $\text{Frontier Proprietary} = 0.8670$ ($\Delta = -0.0313$, CI $[-0.0388, -0.0238]$; GPT-6 Astra $= 0.8360$, $\Delta = -0.0002$), $\text{Large Open-Weight} = 0.8859$ ($\Delta = -0.0496$), and $\text{Small Open-Weight} = 0.9471$ ($\Delta = -0.1117$).
