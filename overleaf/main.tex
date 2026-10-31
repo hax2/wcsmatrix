@@ -133,7 +133,7 @@ We report the prompt mean $\overline{\Delta}_{A - B}$ and $95\%$ percentile conf
  & \textbf{Gemma-E2B} & 0.9884 & 0.9793 & 0.9721 & 0.9620 & 1.0000 & 0.9762 & 0.8691 & $-0.1529$ $[-0.1623, -0.1438]$ \\
 \bottomrule
 \end{tabular}
-\caption{\textbf{Table 1: Complete Realistic Top-$p=0.99$ WCS Matrix on HC3 ELI5.} Columns show the 7 open-weight scorers; rows show the 18 sources stratified by tier. Last column reports prompt-paired $\Delta_{\text{Human}-\text{Src}}$ and $95\%$ bootstrap CI across the 6 bf16 scorers with complete 18-source coverage ($N=50$ prompts; $^{\dagger}N=49$ for MiMo-V2.6-Pro; $^{\ddagger}N=48$ for Qwen-2B). Bold cells under Gemma-12B indicate machine sources that are \emph{less} reachable than human writing ($0.8288$).}
+\caption{\textbf{Complete Realistic Top-$p=0.99$ WCS Matrix on HC3 ELI5.} Columns show the 7 open-weight scorers; rows show the 18 sources stratified by tier. Last column reports prompt-paired $\Delta_{\text{Human}-\text{Src}}$ and $95\%$ bootstrap CI across the 6 bf16 scorers with complete 18-source coverage ($N=50$ prompts; $^{\dagger}N=49$ for MiMo-V2.6-Pro; $^{\ddagger}N=48$ for Qwen-2B). Bold cells under Gemma-12B indicate machine sources that are \emph{less} reachable than human writing ($0.8288$).}
 \label{tab:matrix_099}
 \end{table*}
 
@@ -191,7 +191,7 @@ Our core comparison uses the 6 bf16 Qwen~3.5 and Gemma~4 scorers across all 18 s
  & \textbf{Gemma-E2B} & 0.9629 & 0.9353 & 0.9205 & 0.9030 & 1.0000 & 0.9268 & 0.7768 & 0.8594 ($-0.2146$) \\
 \bottomrule
 \end{tabular}
-\caption{\textbf{Table 2: Realistic Top-$p=0.95$ WCS Matrix and Shipped Scorer-Default Summary on HC3 ELI5.} Columns 3--9 show cell means under realistic $p=0.95$; the final column shows the 6-scorer mean WCS (and paired $\Delta_{\text{Human}-\text{Src}}$) under each scorer's shipped \texttt{generation\_config.json} filter ($T=0.6, k=20, p=0.95$ for Qwen~3.5; $T=1.0, k=64, p=0.95$ for Gemma~4).}
+\caption{\textbf{Realistic Top-$p=0.95$ WCS Matrix and Shipped Scorer-Default Summary on HC3 ELI5.} Columns 3--9 show cell means under realistic $p=0.95$; the final column shows the 6-scorer mean WCS (and paired $\Delta_{\text{Human}-\text{Src}}$) under each scorer's shipped \texttt{generation\_config.json} filter ($T=0.6, k=20, p=0.95$ for Qwen~3.5; $T=1.0, k=64, p=0.95$ for Gemma~4).}
 \label{tab:matrix_095}
 \end{table*}
 
@@ -254,7 +254,7 @@ Under Qwen~3.5's stricter non-thinking model-card defaults ($T=0.7, k=20, p=0.80
  & Gemma-E2B & $-0.1529$ & $-0.1857$ & $-0.2029$ & $-0.1140$ & $-0.2146$ & $-0.1670$ \\
 \bottomrule
 \end{tabular}
-\caption{\textbf{Table 4: Source-Level Paired Reachability Deltas ($\Delta_{\text{Human}-\text{Src}}$) Across Filter Regimes on HC3 ELI5} (averaged over the 6 complete bf16 scorers). Positive values indicate the source is \emph{less} reachable than human writing.}
+\caption{\textbf{Source-Level Paired Reachability Deltas ($\Delta_{\text{Human}-\text{Src}}$) Across Filter Regimes on HC3 ELI5} (averaged over the 6 complete bf16 scorers). Positive values indicate the source is \emph{less} reachable than human writing.}
 \label{tab:source_deltas}
 \end{table*}
 
@@ -266,7 +266,7 @@ As shown in Table~\ref{tab:tier_contrasts} (Sampled $T>0$ rows), stochastic samp
 \begin{table*}[t]
 \centering
 \scriptsize
-\setlength{\tabcolsep}{3.5pt}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{llcccccc}
 \toprule
 \textbf{Experiment / Domain} & \textbf{Condition} & \textbf{Human} & \textbf{Frontier Prop.} & \textbf{Large OW} & \textbf{Small OW} & \textbf{Large OW $-$ Small OW} & \textbf{Large OW $-$ Frontier Prop.} \\
@@ -294,8 +294,9 @@ As shown in Table~\ref{tab:tier_contrasts} (Sampled $T>0$ rows), stochastic samp
  & Strict-Full $p=0.99$ & 0.8543 & 0.8719 & 0.8938 & 0.9519 & $-0.0581$ $[-0.0613, -0.0550]$ & $+0.0219$ $[+0.0195, +0.0244]$ \\
  & Shipped Default & 0.6584 & 0.7284 & 0.7595 & 0.8687 & $-0.1092$ $[-0.1157, -0.1028]$ & $+0.0311$ $[+0.0264, +0.0358]$ \\
 \bottomrule
-\end{tabular}
-\caption{\textbf{Table 5: Tier-Level Means and Prompt-Paired Contrasts Across Experiments, Filter Regimes, and Domains.} All bracketed intervals are $95\%$ paired bootstrap CIs ($10{,}000$ replicates). Under 9-scorer Strict-Full $p=0.99$, Human ($0.8794$) and Frontier Proprietary ($0.8844$) have $\Delta = -0.0050$ ($95\%$ CI $[-0.0103, +0.0001]$, overlapping zero).}
+\end{tabular}%
+}
+\caption{\textbf{Tier-Level Means and Prompt-Paired Contrasts Across Experiments, Filter Regimes, and Domains.} All bracketed intervals are $95\%$ paired bootstrap CIs ($10{,}000$ replicates). Under 9-scorer Strict-Full $p=0.99$, Human ($0.8794$) and Frontier Proprietary ($0.8844$) have $\Delta = -0.0050$ ($95\%$ CI $[-0.0103, +0.0001]$, overlapping zero).}
 \label{tab:tier_contrasts}
 \end{table*}
 
@@ -332,9 +333,17 @@ To measure this mechanism directly, we ran a dedicated GPU validation auditing \
  & \textbf{Small Open-Wt.\ (mean)} & 0.013\% & 0.001\% & 0.268\% & 0.020\% & 0.9004 & 0.9012 & 0.9020 \\
 \bottomrule
 \end{tabular}
-\caption{\textbf{Table 6: Excluded Tail Mass ($1 - M_K$) and Candidate-Support Validation ($K=100$ vs.\ $K=1000$ vs.\ Full Vocabulary $|\mathcal{V}|$)} at $p=0.99$ on HC3 ELI5. Expanding candidate support from top-$100$ to top-$1000$ eliminates $>82\%$ of the support-truncation gap on human writing and makes human writing \emph{more} reachable than GPT-6 Astra on both Qwen-9B ($0.9644$ vs.\ $0.9432$) and Gemma-12B ($0.8637$ vs.\ $0.7210$).}
+\caption{\textbf{Excluded Tail Mass ($1 - M_K$) and Candidate-Support Validation ($K=100$ vs.\ $K=1000$ vs.\ Full Vocabulary $|\mathcal{V}|$)} at $p=0.99$ on HC3 ELI5. Expanding candidate support from top-$100$ to top-$1000$ eliminates $>82\%$ of the support-truncation gap on human writing and makes human writing \emph{more} reachable than GPT-6 Astra on both Qwen-9B ($0.9644$ vs.\ $0.9432$) and Gemma-12B ($0.8637$ vs.\ $0.7210$).}
 \label{tab:top1000}
 \end{table*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/matrix-expanded-realistic-0.99.png}\hfill
+\includegraphics[width=0.49\textwidth]{figures/matrix-wiki-realistic-0.99.png}
+\caption{\textbf{Cross-Family and Cross-Domain Generalization of the Reachability Matrix} (realistic top-$p=0.99$). \emph{Left:} 4-family expanded scorer pool (Qwen~3.5, Gemma~4, Llama~3.1/3.2, Mistral~7B; 9 bf16 scorers) on HC3 ELI5. \emph{Right:} Second-domain replication across all 16 sources on HC3 Wikipedia CS/AI (50 prompts).}
+\label{fig:generalization}
+\end{figure*}
 
 \subsection{Generalization Across Four Scorer Families \& Second Domain}
 \label{sec:expanded_scorers}
