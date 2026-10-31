@@ -81,7 +81,7 @@ To prevent subword splitting from artificially inflating coverage on rare or com
 \begin{equation}
 \text{cov}_{s,g}^{\mathcal{F}}(w_m) = \prod_{i:\, [c_i, d_i) \cap [a_m, b_m) \neq \emptyset} \mathbb{I}\!\left[t_i \in \mathcal{C}_{\mathcal{F}}(P_i)\right].
 \end{equation}
-The prompt-level score is $\text{WCS}_{s,g}^{\mathcal{F}}(q) = \frac{1}{M}\sum_{m=1}^M \text{cov}_{s,g}^{\mathcal{F}}(w_m)$, and the matrix cell is the prompt mean $\overline{\text{WCS}}_{s,g}^{\mathcal{F}} = \frac{1}{|\mathcal{Q}|}\sum_{q \in \mathcal{Q}} \text{WCS}_{s,g}^{\mathcal{F}}(q)$.
+The prompt-level score is $\text{WCS}_{s,g}^{\mathcal{F}}(q) = \frac{1}{M}\sum_{m=1}^M \text{cov}_{s,g}^{\mathcal{F}}(w_m)$, and the matrix cell is the prompt mean $\overline{\text{WCS}}_{s,g}^{\mathcal{F}} = \frac{1}{|\mathcal{Q}|}\sum_{q \in \mathcal{Q}} \text{WCS}_{s,g}^{\mathcal{F}}(q)$. When $\text{cov}_{s,g}^{\mathcal{F}}(w_m) = 0$, word $w_m$ is deemed \emph{lost}; we provide an empirical taxonomy of lost words across all generators and tiers in Appendix~\ref{sec:appendix_lost_words}.
 
 \subsection{Candidate-Pool Filter Families}
 We evaluate four mathematically distinct candidate-pool filter families:
@@ -377,5 +377,44 @@ These findings have immediate practical consequences: speculative decoding with 
 
 \bibliographystyle{abbrv}
 \bibliography{references}
+
+\appendix
+\section{Linguistic and Empirical Taxonomy of WCS-Lost Words}
+\label{sec:appendix_lost_words}
+
+\paragraph{Operational Definition:}
+In Word Coverage Scoring (WCS), an observed response text is segmented into words $w_1, w_2, \dots, w_M$ under the specified word boundary convention (whitespace spans by default). Under scorer $\mathcal{S}$ with candidate filter $\mathcal{F}$ at nucleus threshold $p \in (0, 1]$, each word $w_m$ spanning subtokens $\{t_k\}_{k \in \mathcal{T}(w_m)}$ is evaluated for candidate support. A word is defined as \textbf{lost} ($\text{cov}_{\mathcal{S},g}^{\mathcal{F}}(w_m) = 0$) if \emph{at least one} of its constituent subtokens falls outside the scorer's top-$p$ nucleus:
+\begin{equation}
+    \text{Lost}(w_m; \mathcal{S}, p) \iff \exists k \in \mathcal{T}(w_m) \;\text{ s.t. }\; t_k \notin \mathcal{C}_{\mathcal{F}}(P_k).
+\end{equation}
+Across all 12,067 audits in the 22-source $\times$ 11-scorer expanded matrix (Section~\ref{sec:expanded_scorers}), we tracked every word loss event ($288{,}852$ total instances). Table~\ref{tab:lost_words} presents the empirical taxonomy of top lost lexical and typographical items stratified by generator tier.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lp{4.2cm}p{8.8cm}}
+\toprule
+\textbf{Generator Tier} & \textbf{Representative Sources} & \textbf{Top Most Frequently Lost Words (Count across 11 Scorers at $p=0.99$)} \\
+\midrule
+\textit{Human Writing} & Human (HC3 ELI5) & \texttt{,}\ (537), \texttt{.}\ (404), \texttt{the}\ (269), \texttt{'s}\ (255), \texttt{-}\ (185), \texttt{n't}\ (183), \texttt{(}\ (168), \texttt{and}\ (163), \texttt{a}\ (153) \\
+\midrule
+\textit{Frontier Proprietary} & GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon & \texttt{the}\ (1,065), \texttt{a}\ (1,016), \texttt{and}\ (870), \texttt{your}\ (539), \texttt{that}\ (521), \texttt{is}\ (483), \texttt{it}\ (371), \texttt{so}\ (350), \texttt{-}\ (240), \texttt{can}\ (240) \\
+\midrule
+\textit{Large Open-Weight} & MiMo-V2.6-Pro, GLM-5.3, Kimi-K3, Qwen3.8-2.4T, DeepSeek-V4-Pro & \textbf{Em-dash} \texttt{—}\ (3,866 across top 4 models: MiMo 1,143, GLM 1,106, Kimi 1,000, Qwen3.8 617), \texttt{the}\ (2,139), \texttt{a}\ (1,517), \texttt{and}\ (1,291), \texttt{your}\ (882), \texttt{here's}\ (822) \\
+\midrule
+\textit{Small Open-Weight} & Gemma-4 (E2B/E4B), Mistral-7B, Qwen-3.5 (2B--32B), Llama-3.1/3.2 & \textbf{Mistral:} \texttt{alright,}\ (221), \texttt{let's}\ (189); \textbf{Gemma:} \texttt{it's}\ [typographic ’]\ (440), \texttt{imagine}\ (133), \texttt{super}\ (75); \textbf{Llama:} \texttt{you're}\ (281), \texttt{it's}\ (262) \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Qualitative Taxonomy of Words Lost Under WCS ($p=0.99$ Realistic).} Empirical counts of lost words across all 11 scorers and 50 HC3 ELI5 prompts. Human losses concentrate in whitespace-isolated punctuation and contraction clitics; large open-weight models suffer massive reachability penalties from stylistic em-dashes (\texttt{—}); small open models lose distinct RLHF conversational conversational markers (\emph{``alright, let's''}, \emph{``imagine''}).}
+\label{tab:lost_words}
+\end{table*}
+
+\paragraph{Key Qualitative Insights:}
+\begin{enumerate}
+    \item \textbf{Human Punctuation and Contraction Detachment:} The primary mechanism reducing human WCS ($0.8357$) relative to machine text under small scorers is not esoteric vocabulary, but natural conversational syntax. In informal explanatory text (HC3 Reddit ELI5), humans routinely use standalone punctuation, parentheses, dashes, and clitic contractions (\texttt{n't}, \texttt{'s}) separated by whitespace. Small scorer models, conditioned on standard assistant-style autoregressive templates, assign minimal probability mass to isolated punctuation tokens, pushing them past the $0.99$ cumulative mass boundary.
+    \item \textbf{The Open-Weight Em-Dash Phenomenon:} Frontier open-weight models from Chinese research laboratories (MiMo-V2.6-Pro, GLM-5.3, Kimi-K3, Qwen3.8-2.4T) exhibit a pronounced stylistic reliance on em-dashes (\texttt{—}) to structure explanatory clauses. In total, over $3{,}860$ loss events in our audit dataset were caused by the single character \texttt{—}. Western open scorers (Gemma, Llama, Mistral) rarely predict em-dashes in informal conversational text, systematically truncating these words from the nucleus.
+    \item \textbf{Stylistic Openers and Tokenization Artifacts:} Small models exhibit stark stylistic signatures that cross-family scorers reject. Mistral-7B systematically opens explanatory responses with \emph{``Alright, let's...''}, generating over $400$ lost word events when scored by Qwen or Gemma. Gemma models exclusively output typographical curly apostrophes (\texttt{’}) rather than ASCII apostrophes (\texttt{'}), which triggers subtoken boundary mismatches and immediate word survival failure under Llama and Mistral tokenizers.
+\end{enumerate}
 
 \end{document}
