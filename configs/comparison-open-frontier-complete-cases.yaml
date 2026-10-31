@@ -292,7 +292,7 @@ scoring:
   max_sequence_tokens: 8192
   temperature: 1.0
 hardware:
-  vram_limit_gib: 38
+  vram_limit_gib: 42
   reserve_gib: 4
   cpu_memory_gib: 64
 analysis:

@@ -1,0 +1,11 @@
+{
+  "config_sha256": "4e820779e538b6676e4c9be7692cbc2bb6fb47dfe28d585008c1259305e7b402",
+  "score_rows": 55503,
+  "partial": true,
+  "evaluation_exclusions": {
+    "hc3-eli5-16977": "MiMo returned content_filter; exclude this prompt from every source and scorer for the complete-case comparison. Original 50-question collection remains available."
+  },
+  "bootstrap_replicates": 10000,
+  "seed": 42,
+  "intervals": "pointwise paired percentile bootstrap; no multiplicity correction"
+}

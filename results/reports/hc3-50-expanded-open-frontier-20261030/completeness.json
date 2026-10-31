@@ -66,69 +66,6 @@
     },
     {
       "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
       "source": "qwen-2b",
       "mode": "realistic",
       "p": 0.9,
@@ -189,69 +126,6 @@
       "mode": "strict_full",
       "p": 0.99,
       "n": 48
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-12b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
     },
     {
       "scorer": "gemma-e2b",
@@ -318,69 +192,6 @@
     },
     {
       "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
       "source": "qwen-2b",
       "mode": "realistic",
       "p": 0.9,
@@ -441,69 +252,6 @@
       "mode": "strict_full",
       "p": 0.99,
       "n": 48
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
     },
     {
       "scorer": "gemma-e4b",
@@ -570,69 +318,6 @@
     },
     {
       "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
       "source": "qwen-2b",
       "mode": "realistic",
       "p": 0.9,
@@ -693,69 +378,6 @@
       "mode": "strict_full",
       "p": 0.99,
       "n": 48
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "gemma-e4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
     },
     {
       "scorer": "llama-3.1-8b",
@@ -2586,69 +2208,6 @@
     },
     {
       "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
       "source": "qwen-2b",
       "mode": "realistic",
       "p": 0.9,
@@ -2709,69 +2268,6 @@
       "mode": "strict_full",
       "p": 0.99,
       "n": 48
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-2b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
     },
     {
       "scorer": "qwen-32b-int8",
@@ -4224,69 +3720,6 @@
     },
     {
       "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
       "source": "qwen-2b",
       "mode": "realistic",
       "p": 0.9,
@@ -4347,69 +3780,6 @@
       "mode": "strict_full",
       "p": 0.99,
       "n": 48
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-4b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
     },
     {
       "scorer": "qwen-9b",
@@ -4476,69 +3846,6 @@
     },
     {
       "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-27b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
       "source": "qwen-2b",
       "mode": "realistic",
       "p": 0.9,
@@ -4599,69 +3906,6 @@
       "mode": "strict_full",
       "p": 0.99,
       "n": 48
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "realistic",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "strict",
-      "p": 0.99,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.9,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.95,
-      "n": 0
-    },
-    {
-      "scorer": "qwen-9b",
-      "source": "qwen-32b-int8",
-      "mode": "strict_full",
-      "p": 0.99,
-      "n": 0
     }
   ],
   "evaluation_exclusions": {}
